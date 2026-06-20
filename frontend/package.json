@@ -1,0 +1,28 @@
+{
+  "name": "erdal-guda-tailor-admin",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "assets:audit": "node scripts/audit-assets.mjs dist",
+    "assets:audit:src": "node scripts/audit-assets.mjs src/assets public",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "qrcode.react": "^4.2.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.4"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "sharp": "^0.34.5",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.12"
+  }
+}

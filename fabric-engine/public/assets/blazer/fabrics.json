@@ -1,0 +1,398 @@
+[
+  {
+    "key": "custom-siyah-velvet",
+    "fabricId": "custom_siyah_velvet",
+    "label": "siyah velvet",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_siyah_velvet.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-gri-melenj",
+    "fabricId": "custom_gri_melenj",
+    "label": "Gri Melenj",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_gri_melenj.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-kahverengi-velvet",
+    "fabricId": "custom_kahverengi_velvet",
+    "label": "Kahverengi Velvet",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_kahverengi_velvet.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-lacivert-baklava-desen",
+    "fabricId": "custom_lacivert_baklava_desen",
+    "label": "Lacivert Baklava Desen",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_lacivert_baklava_desen.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-mavi-izgili",
+    "fabricId": "custom_mavi_izgili",
+    "label": "Mavi Çizgili",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_mavi_izgili.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-beyaz",
+    "fabricId": "custom_beyaz",
+    "label": "beyaz",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_beyaz.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-k-rm-z-izgili",
+    "fabricId": "custom_k_rm_z_izgili",
+    "label": "Kırmızı çizgili",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_k_rm_z_izgili.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-gri",
+    "fabricId": "custom_gri",
+    "label": "gri",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_gri.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-gri1",
+    "fabricId": "custom_gri1",
+    "label": "gri1",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_gri1.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-byeaz-izgili",
+    "fabricId": "custom_byeaz_izgili",
+    "label": "byeaz çizgili",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_byeaz_izgili.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-gri3",
+    "fabricId": "custom_gri3",
+    "label": "gri3",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_gri3.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-gri4",
+    "fabricId": "custom_gri4",
+    "label": "gri4",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_gri4.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-gri5",
+    "fabricId": "custom_gri5",
+    "label": "gri5",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_gri5.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-kahve-velvet",
+    "fabricId": "custom_kahve_velvet",
+    "label": "Kahve velvet",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_kahve_velvet.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-mavi-izgili-002",
+    "fabricId": "custom_mavi_izgili_002",
+    "label": "Mavi çizgili",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_mavi_izgili_002.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-mavi2",
+    "fabricId": "custom_mavi2",
+    "label": "Mavi2",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_mavi2.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-gri8",
+    "fabricId": "custom_gri8",
+    "label": "Gri8",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_gri8.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-beyaz-izigili",
+    "fabricId": "custom_beyaz_izigili",
+    "label": "Beyaz Çizigili",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_beyaz_izigili.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-yatay-izgili",
+    "fabricId": "custom_yatay_izgili",
+    "label": "yatay çizgili",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_yatay_izgili.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-laci",
+    "fabricId": "custom_laci",
+    "label": "Laci",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_laci.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-beyaz-izgili-101",
+    "fabricId": "custom_beyaz_izgili_101",
+    "label": "Beyaz Çizgili 101",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_beyaz_izgili_101.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-kumas",
+    "fabricId": "custom_kumas",
+    "label": "Kumas",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_kumas.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-izgili",
+    "fabricId": "custom_izgili",
+    "label": "Çizgili",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_izgili.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-i",
+    "fabricId": "custom_i",
+    "label": "çi",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_i.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-iz",
+    "fabricId": "custom_iz",
+    "label": "çiz",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_iz.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-izg",
+    "fabricId": "custom_izg",
+    "label": "çizg",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_izg.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-deneme",
+    "fabricId": "custom_deneme",
+    "label": "deneme",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_deneme.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-deneme1",
+    "fabricId": "custom_deneme1",
+    "label": "deneme1",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_deneme1.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-deneme2",
+    "fabricId": "custom_deneme2",
+    "label": "deneme2",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_deneme2.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-deneme3",
+    "fabricId": "custom_deneme3",
+    "label": "deneme3",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_deneme3.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-deneme4",
+    "fabricId": "custom_deneme4",
+    "label": "deneme4",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_deneme4.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-deneme5",
+    "fabricId": "custom_deneme5",
+    "label": "deneme5",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_deneme5.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-d-eme",
+    "fabricId": "custom_d_eme",
+    "label": "döşeme",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_d_eme.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-deneme6",
+    "fabricId": "custom_deneme6",
+    "label": "deneme6",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_deneme6.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-d-eme2",
+    "fabricId": "custom_d_eme2",
+    "label": "döşeme2",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_d_eme2.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-deneme7",
+    "fabricId": "custom_deneme7",
+    "label": "deneme7",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_deneme7.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-d-eme3",
+    "fabricId": "custom_d_eme3",
+    "label": "döşeme3",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_d_eme3.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-denemeson",
+    "fabricId": "custom_denemeson",
+    "label": "denemeson",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_denemeson.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-d-emeson",
+    "fabricId": "custom_d_emeson",
+    "label": "döşemeson",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_d_emeson.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-mavi-izgili-003",
+    "fabricId": "custom_mavi_izgili_003",
+    "label": "Mavi çizgili",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_mavi_izgili_003.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-gri-002",
+    "fabricId": "custom_gri_002",
+    "label": "Gri",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_gri_002.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-mavi-izgili-004",
+    "fabricId": "custom_mavi_izgili_004",
+    "label": "Mavi Çizgili",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "/assets/blazer/generated-swatches/custom_mavi_izgili_004.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-kahverengi-velvet-002",
+    "fabricId": "custom_kahverengi_velvet_002",
+    "label": "Kahverengi Velvet",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "https://erdalguda-assets.s3.eu-north-1.amazonaws.com/blazer/generated-swatches/custom_kahverengi_velvet_002.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-mavi-izgili-005",
+    "fabricId": "custom_mavi_izgili_005",
+    "label": "Mavi Çizgili",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "https://erdalguda-assets.s3.eu-north-1.amazonaws.com/blazer/generated-swatches/custom_mavi_izgili_005.png",
+    "color": null,
+    "garmentType": "blazer"
+  }
+]

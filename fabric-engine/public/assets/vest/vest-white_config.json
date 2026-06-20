@@ -1,0 +1,2488 @@
+{
+  "_comment": "Waistcoat layer config. base always included. Select one lapel combo + one hip pocket.",
+  "base": [
+    {
+      "path": "vest/base/base/vest-white__z108__etiqueta.png",
+      "z": 108,
+      "fabric": false
+    },
+    {
+      "path": "vest/base/base/vest-white__z108__bottom_single_breasted+edge_diagonal.png",
+      "z": 108,
+      "fabric": true,
+      "rotation": 0,
+      "zones": null
+    },
+    {
+      "path": "vest/base/base/vest-white__z106__espalda+single_breasted.png",
+      "z": 106,
+      "fabric": false
+    },
+    {
+      "path": "vest/base/base/vest-white__z106__espalda+double_breasted.png",
+      "z": 106,
+      "fabric": false
+    },
+    {
+      "path": "vest/base/base/vest-white__z106__interior_diagonal.png",
+      "z": 106,
+      "fabric": false
+    }
+  ],
+  "lapels": {
+    "single-4btn-narrow-notch": {
+      "label": "single-4btn-narrow-notch",
+      "layers": [
+        {
+          "path": "vest/lapels/single-4btn-narrow-notch/vest-white__z107__neck_single_breasted+buttons_4+lapel_narrow+style_lapel_notch.png",
+          "z": 107,
+          "fabric": true,
+          "rotation": 0,
+          "zones": [
+            {
+              "polygon": [
+                [
+                  219,
+                  110
+                ],
+                [
+                  233,
+                  115
+                ],
+                [
+                  253,
+                  96
+                ],
+                [
+                  253,
+                  81
+                ],
+                [
+                  223,
+                  95
+                ]
+              ],
+              "rotation": -20
+            },
+            {
+              "polygon": [
+                [
+                  218,
+                  129
+                ],
+                [
+                  253,
+                  97
+                ],
+                [
+                  272,
+                  139
+                ],
+                [
+                  295,
+                  204
+                ],
+                [
+                  312,
+                  247
+                ],
+                [
+                  307,
+                  258
+                ],
+                [
+                  273,
+                  211
+                ],
+                [
+                  242,
+                  163
+                ]
+              ],
+              "rotation": 35
+            },
+            {
+              "polygon": [
+                [
+                  369,
+                  95
+                ],
+                [
+                  388,
+                  114
+                ],
+                [
+                  403,
+                  111
+                ],
+                [
+                  397,
+                  95
+                ],
+                [
+                  372,
+                  83
+                ]
+              ],
+              "rotation": 20
+            },
+            {
+              "polygon": [
+                [
+                  370,
+                  99
+                ],
+                [
+                  406,
+                  129
+                ],
+                [
+                  365,
+                  203
+                ],
+                [
+                  330,
+                  245
+                ],
+                [
+                  302,
+                  274
+                ],
+                [
+                  321,
+                  230
+                ],
+                [
+                  344,
+                  169
+                ]
+              ],
+              "rotation": -35
+            }
+          ]
+        },
+        {
+          "path": "vest/lapels/single-4btn-narrow-notch/vest-white__z109__neck_single_breasted+buttons_4+lapel_narrow+style_lapel_notch.png",
+          "z": 109,
+          "fabric": false
+        }
+      ]
+    },
+    "single-4btn-narrow-peak": {
+      "label": "single-4btn-narrow-peak",
+      "layers": [
+        {
+          "path": "vest/lapels/single-4btn-narrow-peak/vest-white__z107__neck_single_breasted+buttons_4+lapel_narrow+style_lapel_peak.png",
+          "z": 107,
+          "fabric": true,
+          "rotation": 0,
+          "zones": [
+            {
+              "polygon": [
+                [
+                  223,
+                  122
+                ],
+                [
+                  241,
+                  124
+                ],
+                [
+                  257,
+                  102
+                ],
+                [
+                  253,
+                  81
+                ],
+                [
+                  224,
+                  98
+                ]
+              ],
+              "rotation": -20
+            },
+            {
+              "polygon": [
+                [
+                  215,
+                  125
+                ],
+                [
+                  242,
+                  125
+                ],
+                [
+                  257,
+                  103
+                ],
+                [
+                  294,
+                  204
+                ],
+                [
+                  313,
+                  247
+                ],
+                [
+                  306,
+                  257
+                ],
+                [
+                  272,
+                  213
+                ],
+                [
+                  239,
+                  166
+                ]
+              ],
+              "rotation": 35
+            },
+            {
+              "polygon": [
+                [
+                  368,
+                  102
+                ],
+                [
+                  381,
+                  125
+                ],
+                [
+                  400,
+                  124
+                ],
+                [
+                  398,
+                  95
+                ],
+                [
+                  372,
+                  82
+                ]
+              ],
+              "rotation": 20
+            },
+            {
+              "polygon": [
+                [
+                  369,
+                  100
+                ],
+                [
+                  381,
+                  125
+                ],
+                [
+                  407,
+                  125
+                ],
+                [
+                  396,
+                  148
+                ],
+                [
+                  373,
+                  189
+                ],
+                [
+                  346,
+                  228
+                ],
+                [
+                  322,
+                  255
+                ],
+                [
+                  302,
+                  273
+                ],
+                [
+                  316,
+                  243
+                ],
+                [
+                  338,
+                  185
+                ],
+                [
+                  356,
+                  135
+                ]
+              ],
+              "rotation": -35
+            }
+          ]
+        },
+        {
+          "path": "vest/lapels/single-4btn-narrow-peak/vest-white__z109__neck_single_breasted+buttons_4+lapel_narrow+style_lapel_peak.png",
+          "z": 109,
+          "fabric": false
+        }
+      ]
+    },
+    "single-4btn-medium-notch": {
+      "label": "single-4btn-medium-notch",
+      "layers": [
+        {
+          "path": "vest/lapels/single-4btn-medium-notch/vest-white__z107__neck_single_breasted+buttons_4+lapel_medium+style_lapel_notch.png",
+          "z": 107,
+          "fabric": true,
+          "rotation": 0,
+          "zones": [
+            {
+              "polygon": [
+                [
+                  213,
+                  113
+                ],
+                [
+                  218,
+                  101
+                ],
+                [
+                  253,
+                  83
+                ],
+                [
+                  253,
+                  95
+                ],
+                [
+                  223,
+                  117
+                ]
+              ],
+              "rotation": -20
+            },
+            {
+              "polygon": [
+                [
+                  210,
+                  133
+                ],
+                [
+                  253,
+                  96
+                ],
+                [
+                  272,
+                  138
+                ],
+                [
+                  288,
+                  190
+                ],
+                [
+                  312,
+                  246
+                ],
+                [
+                  308,
+                  256
+                ],
+                [
+                  290,
+                  235
+                ],
+                [
+                  257,
+                  195
+                ],
+                [
+                  229,
+                  162
+                ]
+              ],
+              "rotation": 35
+            },
+            {
+              "polygon": [
+                [
+                  367,
+                  97
+                ],
+                [
+                  396,
+                  119
+                ],
+                [
+                  410,
+                  112
+                ],
+                [
+                  402,
+                  95
+                ],
+                [
+                  371,
+                  83
+                ]
+              ],
+              "rotation": 20
+            },
+            {
+              "polygon": [
+                [
+                  369,
+                  98
+                ],
+                [
+                  412,
+                  132
+                ],
+                [
+                  393,
+                  159
+                ],
+                [
+                  362,
+                  204
+                ],
+                [
+                  334,
+                  238
+                ],
+                [
+                  304,
+                  272
+                ],
+                [
+                  317,
+                  237
+                ],
+                [
+                  339,
+                  181
+                ],
+                [
+                  358,
+                  132
+                ]
+              ],
+              "rotation": -35
+            }
+          ]
+        },
+        {
+          "path": "vest/lapels/single-4btn-medium-notch/vest-white__z109__neck_single_breasted+buttons_4+lapel_medium+style_lapel_notch.png",
+          "z": 109,
+          "fabric": false
+        }
+      ]
+    },
+    "single-4btn-medium-peak": {
+      "label": "single-4btn-medium-peak",
+      "layers": [
+        {
+          "path": "vest/lapels/single-4btn-medium-peak/vest-white__z107__neck_single_breasted+buttons_4+lapel_medium+style_lapel_peak.png",
+          "z": 107,
+          "fabric": true,
+          "rotation": 0,
+          "zones": [
+            {
+              "polygon": [
+                [
+                  212,
+                  125
+                ],
+                [
+                  231,
+                  126
+                ],
+                [
+                  253,
+                  99
+                ],
+                [
+                  253,
+                  82
+                ],
+                [
+                  221,
+                  98
+                ],
+                [
+                  215,
+                  113
+                ]
+              ],
+              "rotation": -20
+            },
+            {
+              "polygon": [
+                [
+                  204,
+                  125
+                ],
+                [
+                  233,
+                  126
+                ],
+                [
+                  253,
+                  99
+                ],
+                [
+                  270,
+                  137
+                ],
+                [
+                  288,
+                  185
+                ],
+                [
+                  304,
+                  222
+                ],
+                [
+                  312,
+                  247
+                ],
+                [
+                  307,
+                  260
+                ],
+                [
+                  281,
+                  225
+                ],
+                [
+                  247,
+                  188
+                ],
+                [
+                  221,
+                  155
+                ]
+              ],
+              "rotation": 35
+            },
+            {
+              "polygon": [
+                [
+                  370,
+                  98
+                ],
+                [
+                  387,
+                  123
+                ],
+                [
+                  410,
+                  125
+                ],
+                [
+                  400,
+                  94
+                ],
+                [
+                  372,
+                  83
+                ]
+              ],
+              "rotation": 20
+            },
+            {
+              "polygon": [
+                [
+                  370,
+                  99
+                ],
+                [
+                  388,
+                  124
+                ],
+                [
+                  415,
+                  125
+                ],
+                [
+                  404,
+                  145
+                ],
+                [
+                  380,
+                  180
+                ],
+                [
+                  351,
+                  220
+                ],
+                [
+                  321,
+                  254
+                ],
+                [
+                  302,
+                  273
+                ],
+                [
+                  316,
+                  244
+                ],
+                [
+                  339,
+                  179
+                ]
+              ],
+              "rotation": -35
+            }
+          ]
+        },
+        {
+          "path": "vest/lapels/single-4btn-medium-peak/vest-white__z109__neck_single_breasted+buttons_4+lapel_medium+style_lapel_peak.png",
+          "z": 109,
+          "fabric": false
+        }
+      ]
+    },
+    "single-5btn-narrow-notch": {
+      "label": "single-5btn-narrow-notch",
+      "layers": [
+        {
+          "path": "vest/lapels/single-5btn-narrow-notch/vest-white__z107__neck_single_breasted+buttons_5+lapel_narrow+style_lapel_notch.png",
+          "z": 107,
+          "fabric": true,
+          "rotation": 0,
+          "zones": [
+            {
+              "polygon": [
+                [
+                  233,
+                  112
+                ],
+                [
+                  255,
+                  97
+                ],
+                [
+                  253,
+                  80
+                ],
+                [
+                  224,
+                  95
+                ],
+                [
+                  219,
+                  110
+                ]
+              ],
+              "rotation": -20
+            },
+            {
+              "polygon": [
+                [
+                  256,
+                  98
+                ],
+                [
+                  219,
+                  128
+                ],
+                [
+                  271,
+                  209
+                ],
+                [
+                  306,
+                  256
+                ],
+                [
+                  314,
+                  248
+                ],
+                [
+                  287,
+                  181
+                ],
+                [
+                  272,
+                  140
+                ]
+              ],
+              "rotation": 35
+            },
+            {
+              "polygon": [
+                [
+                  369,
+                  96
+                ],
+                [
+                  387,
+                  114
+                ],
+                [
+                  403,
+                  110
+                ],
+                [
+                  395,
+                  90
+                ],
+                [
+                  373,
+                  84
+                ]
+              ],
+              "rotation": 20
+            },
+            {
+              "polygon": [
+                [
+                  369,
+                  100
+                ],
+                [
+                  403,
+                  128
+                ],
+                [
+                  391,
+                  153
+                ],
+                [
+                  362,
+                  202
+                ],
+                [
+                  335,
+                  240
+                ],
+                [
+                  305,
+                  267
+                ],
+                [
+                  328,
+                  215
+                ],
+                [
+                  355,
+                  140
+                ]
+              ],
+              "rotation": -35
+            }
+          ]
+        },
+        {
+          "path": "vest/lapels/single-5btn-narrow-notch/vest-white__z109__neck_single_breasted+buttons_5+lapel_narrow+style_lapel_notch.png",
+          "z": 109,
+          "fabric": false
+        }
+      ]
+    },
+    "single-5btn-narrow-peak": {
+      "label": "single-5btn-narrow-peak",
+      "layers": [
+        {
+          "path": "vest/lapels/single-5btn-narrow-peak/vest-white__z107__neck_single_breasted+buttons_5+lapel_narrow+style_lapel_peak.png",
+          "z": 107,
+          "fabric": true,
+          "rotation": 0,
+          "zones": [
+            {
+              "polygon": [
+                [
+                  223,
+                  122
+                ],
+                [
+                  239,
+                  125
+                ],
+                [
+                  258,
+                  104
+                ],
+                [
+                  253,
+                  81
+                ],
+                [
+                  223,
+                  97
+                ]
+              ],
+              "rotation": -20
+            },
+            {
+              "polygon": [
+                [
+                  215,
+                  125
+                ],
+                [
+                  239,
+                  125
+                ],
+                [
+                  257,
+                  106
+                ],
+                [
+                  276,
+                  152
+                ],
+                [
+                  293,
+                  197
+                ],
+                [
+                  305,
+                  229
+                ],
+                [
+                  313,
+                  249
+                ],
+                [
+                  308,
+                  259
+                ],
+                [
+                  292,
+                  241
+                ],
+                [
+                  269,
+                  211
+                ],
+                [
+                  236,
+                  162
+                ]
+              ],
+              "rotation": 35
+            },
+            {
+              "polygon": [
+                [
+                  370,
+                  102
+                ],
+                [
+                  381,
+                  124
+                ],
+                [
+                  399,
+                  124
+                ],
+                [
+                  396,
+                  95
+                ],
+                [
+                  371,
+                  83
+                ]
+              ],
+              "rotation": 20
+            },
+            {
+              "polygon": [
+                [
+                  408,
+                  125
+                ],
+                [
+                  382,
+                  126
+                ],
+                [
+                  367,
+                  102
+                ],
+                [
+                  355,
+                  142
+                ],
+                [
+                  339,
+                  183
+                ],
+                [
+                  325,
+                  219
+                ],
+                [
+                  315,
+                  244
+                ],
+                [
+                  302,
+                  271
+                ],
+                [
+                  314,
+                  264
+                ],
+                [
+                  345,
+                  228
+                ],
+                [
+                  370,
+                  193
+                ],
+                [
+                  391,
+                  159
+                ]
+              ],
+              "rotation": -35
+            }
+          ]
+        },
+        {
+          "path": "vest/lapels/single-5btn-narrow-peak/vest-white__z109__neck_single_breasted+buttons_5+lapel_narrow+style_lapel_peak.png",
+          "z": 109,
+          "fabric": false
+        }
+      ]
+    },
+    "single-5btn-medium-notch": {
+      "label": "single-5btn-medium-notch",
+      "layers": [
+        {
+          "path": "vest/lapels/single-5btn-medium-notch/vest-white__z107__neck_single_breasted+buttons_5+lapel_medium+style_lapel_notch.png",
+          "z": 107,
+          "fabric": true,
+          "rotation": 0,
+          "zones": [
+            {
+              "polygon": [
+                [
+                  227,
+                  117
+                ],
+                [
+                  254,
+                  98
+                ],
+                [
+                  253,
+                  81
+                ],
+                [
+                  215,
+                  100
+                ],
+                [
+                  212,
+                  113
+                ]
+              ],
+              "rotation": -20
+            },
+            {
+              "polygon": [
+                [
+                  209,
+                  132
+                ],
+                [
+                  225,
+                  117
+                ],
+                [
+                  254,
+                  99
+                ],
+                [
+                  272,
+                  140
+                ],
+                [
+                  292,
+                  200
+                ],
+                [
+                  311,
+                  246
+                ],
+                [
+                  308,
+                  258
+                ],
+                [
+                  285,
+                  231
+                ],
+                [
+                  253,
+                  192
+                ],
+                [
+                  233,
+                  165
+                ]
+              ],
+              "rotation": 35
+            },
+            {
+              "polygon": [
+                [
+                  370,
+                  96
+                ],
+                [
+                  396,
+                  119
+                ],
+                [
+                  409,
+                  113
+                ],
+                [
+                  403,
+                  97
+                ],
+                [
+                  371,
+                  82
+                ]
+              ],
+              "rotation": 20
+            },
+            {
+              "polygon": [
+                [
+                  370,
+                  98
+                ],
+                [
+                  411,
+                  130
+                ],
+                [
+                  397,
+                  150
+                ],
+                [
+                  371,
+                  191
+                ],
+                [
+                  336,
+                  236
+                ],
+                [
+                  303,
+                  271
+                ],
+                [
+                  319,
+                  235
+                ],
+                [
+                  355,
+                  142
+                ]
+              ],
+              "rotation": -35
+            }
+          ]
+        },
+        {
+          "path": "vest/lapels/single-5btn-medium-notch/vest-white__z109__neck_single_breasted+buttons_5+lapel_medium+style_lapel_notch.png",
+          "z": 109,
+          "fabric": false
+        }
+      ]
+    },
+    "single-5btn-medium-peak": {
+      "label": "single-5btn-medium-peak",
+      "layers": [
+        {
+          "path": "vest/lapels/single-5btn-medium-peak/vest-white__z107__neck_single_breasted+buttons_5+lapel_medium+style_lapel_peak.png",
+          "z": 107,
+          "fabric": true,
+          "rotation": 0,
+          "zones": [
+            {
+              "polygon": [
+                [
+                  215,
+                  125
+                ],
+                [
+                  233,
+                  125
+                ],
+                [
+                  255,
+                  97
+                ],
+                [
+                  253,
+                  80
+                ],
+                [
+                  221,
+                  97
+                ],
+                [
+                  212,
+                  123
+                ]
+              ],
+              "rotation": -20
+            },
+            {
+              "polygon": [
+                [
+                  204,
+                  126
+                ],
+                [
+                  231,
+                  125
+                ],
+                [
+                  254,
+                  100
+                ],
+                [
+                  312,
+                  247
+                ],
+                [
+                  308,
+                  257
+                ],
+                [
+                  298,
+                  247
+                ],
+                [
+                  253,
+                  192
+                ],
+                [
+                  230,
+                  162
+                ]
+              ],
+              "rotation": 35
+            },
+            {
+              "polygon": [
+                [
+                  370,
+                  98
+                ],
+                [
+                  386,
+                  124
+                ],
+                [
+                  411,
+                  123
+                ],
+                [
+                  399,
+                  94
+                ],
+                [
+                  373,
+                  81
+                ]
+              ],
+              "rotation": 20
+            },
+            {
+              "polygon": [
+                [
+                  368,
+                  97
+                ],
+                [
+                  344,
+                  169
+                ],
+                [
+                  321,
+                  227
+                ],
+                [
+                  301,
+                  271
+                ],
+                [
+                  298,
+                  275
+                ],
+                [
+                  327,
+                  249
+                ],
+                [
+                  373,
+                  191
+                ],
+                [
+                  403,
+                  148
+                ],
+                [
+                  416,
+                  124
+                ],
+                [
+                  388,
+                  125
+                ]
+              ],
+              "rotation": -35
+            }
+          ]
+        },
+        {
+          "path": "vest/lapels/single-5btn-medium-peak/vest-white__z109__neck_single_breasted+buttons_5+lapel_medium+style_lapel_peak.png",
+          "z": 109,
+          "fabric": false
+        }
+      ]
+    },
+    "double-6btn-narrow-notch": {
+      "label": "double-6btn-narrow-notch",
+      "layers": [
+        {
+          "path": "vest/lapels/double-6btn-narrow-notch/vest-white__z107__neck_double_breasted+buttons_6+lapel_narrow+style_lapel_notch.png",
+          "z": 107,
+          "fabric": true,
+          "rotation": 0,
+          "zones": [
+            {
+              "polygon": [
+                [
+                  208,
+                  110
+                ],
+                [
+                  219,
+                  98
+                ],
+                [
+                  249,
+                  84
+                ],
+                [
+                  249,
+                  103
+                ],
+                [
+                  217,
+                  121
+                ]
+              ],
+              "rotation": -20
+            },
+            {
+              "polygon": [
+                [
+                  202,
+                  126
+                ],
+                [
+                  248,
+                  104
+                ],
+                [
+                  272,
+                  162
+                ],
+                [
+                  296,
+                  217
+                ],
+                [
+                  312,
+                  246
+                ],
+                [
+                  297,
+                  268
+                ],
+                [
+                  283,
+                  250
+                ],
+                [
+                  250,
+                  209
+                ],
+                [
+                  225,
+                  170
+                ],
+                [
+                  215,
+                  151
+                ]
+              ],
+              "rotation": 35
+            },
+            {
+              "polygon": [
+                [
+                  369,
+                  103
+                ],
+                [
+                  402,
+                  120
+                ],
+                [
+                  416,
+                  113
+                ],
+                [
+                  409,
+                  99
+                ],
+                [
+                  373,
+                  84
+                ]
+              ],
+              "rotation": 20
+            },
+            {
+              "polygon": [
+                [
+                  368,
+                  103
+                ],
+                [
+                  416,
+                  128
+                ],
+                [
+                  406,
+                  152
+                ],
+                [
+                  392,
+                  185
+                ],
+                [
+                  364,
+                  224
+                ],
+                [
+                  339,
+                  256
+                ],
+                [
+                  298,
+                  286
+                ],
+                [
+                  266,
+                  308
+                ],
+                [
+                  289,
+                  276
+                ],
+                [
+                  317,
+                  234
+                ],
+                [
+                  339,
+                  192
+                ],
+                [
+                  357,
+                  141
+                ]
+              ],
+              "rotation": -35
+            }
+          ]
+        },
+        {
+          "path": "vest/lapels/double-6btn-narrow-notch/vest-white__z109__neck_double_breasted+buttons_6+lapel_narrow+style_lapel_notch.png",
+          "z": 109,
+          "fabric": false
+        }
+      ]
+    },
+    "double-6btn-narrow-peak": {
+      "label": "double-6btn-narrow-peak",
+      "layers": [
+        {
+          "path": "vest/lapels/double-6btn-narrow-peak/vest-white__z107__neck_double_breasted+buttons_6+lapel_narrow+style_lapel_peak.png",
+          "z": 107,
+          "fabric": true,
+          "rotation": 0,
+          "zones": [
+            {
+              "polygon": [
+                [
+                  215,
+                  134
+                ],
+                [
+                  238,
+                  140
+                ],
+                [
+                  253,
+                  113
+                ],
+                [
+                  249,
+                  95
+                ],
+                [
+                  250,
+                  83
+                ],
+                [
+                  227,
+                  92
+                ],
+                [
+                  223,
+                  112
+                ]
+              ],
+              "rotation": -20
+            },
+            {
+              "polygon": [
+                [
+                  200,
+                  130
+                ],
+                [
+                  225,
+                  137
+                ],
+                [
+                  238,
+                  140
+                ],
+                [
+                  253,
+                  114
+                ],
+                [
+                  267,
+                  149
+                ],
+                [
+                  282,
+                  182
+                ],
+                [
+                  299,
+                  216
+                ],
+                [
+                  309,
+                  243
+                ],
+                [
+                  292,
+                  267
+                ],
+                [
+                  272,
+                  244
+                ],
+                [
+                  249,
+                  214
+                ],
+                [
+                  232,
+                  191
+                ],
+                [
+                  215,
+                  166
+                ],
+                [
+                  204,
+                  145
+                ],
+                [
+                  199,
+                  137
+                ]
+              ],
+              "rotation": 35
+            },
+            {
+              "polygon": [
+                [
+                  373,
+                  83
+                ],
+                [
+                  394,
+                  94
+                ],
+                [
+                  405,
+                  133
+                ],
+                [
+                  386,
+                  139
+                ],
+                [
+                  366,
+                  112
+                ]
+              ],
+              "rotation": 20
+            },
+            {
+              "polygon": [
+                [
+                  365,
+                  112
+                ],
+                [
+                  386,
+                  140
+                ],
+                [
+                  416,
+                  132
+                ],
+                [
+                  404,
+                  161
+                ],
+                [
+                  386,
+                  199
+                ],
+                [
+                  360,
+                  234
+                ],
+                [
+                  326,
+                  268
+                ],
+                [
+                  281,
+                  299
+                ],
+                [
+                  264,
+                  311
+                ],
+                [
+                  283,
+                  286
+                ],
+                [
+                  303,
+                  258
+                ],
+                [
+                  324,
+                  222
+                ],
+                [
+                  345,
+                  180
+                ],
+                [
+                  357,
+                  144
+                ]
+              ],
+              "rotation": -35
+            }
+          ]
+        },
+        {
+          "path": "vest/lapels/double-6btn-narrow-peak/vest-white__z109__neck_double_breasted+buttons_6+lapel_narrow+style_lapel_peak.png",
+          "z": 109,
+          "fabric": false
+        }
+      ]
+    },
+    "double-6btn-medium-notch": {
+      "label": "double-6btn-medium-notch",
+      "layers": [
+        {
+          "path": "vest/lapels/double-6btn-medium-notch/vest-white__z107__neck_double_breasted+buttons_6+lapel_medium+style_lapel_notch.png",
+          "z": 107,
+          "fabric": true,
+          "rotation": 0,
+          "zones": [
+            {
+              "polygon": [
+                [
+                  214,
+                  102
+                ],
+                [
+                  202,
+                  117
+                ],
+                [
+                  213,
+                  126
+                ],
+                [
+                  248,
+                  103
+                ],
+                [
+                  249,
+                  83
+                ]
+              ],
+              "rotation": -20
+            },
+            {
+              "polygon": [
+                [
+                  196,
+                  136
+                ],
+                [
+                  228,
+                  197
+                ],
+                [
+                  268,
+                  254
+                ],
+                [
+                  294,
+                  283
+                ],
+                [
+                  313,
+                  251
+                ],
+                [
+                  296,
+                  221
+                ],
+                [
+                  279,
+                  180
+                ],
+                [
+                  260,
+                  134
+                ],
+                [
+                  249,
+                  105
+                ]
+              ],
+              "rotation": 35
+            },
+            {
+              "polygon": [
+                [
+                  373,
+                  83
+                ],
+                [
+                  368,
+                  106
+                ],
+                [
+                  407,
+                  124
+                ],
+                [
+                  421,
+                  117
+                ],
+                [
+                  413,
+                  99
+                ]
+              ],
+              "rotation": 20
+            },
+            {
+              "polygon": [
+                [
+                  426,
+                  136
+                ],
+                [
+                  410,
+                  167
+                ],
+                [
+                  372,
+                  231
+                ],
+                [
+                  345,
+                  265
+                ],
+                [
+                  317,
+                  289
+                ],
+                [
+                  287,
+                  313
+                ],
+                [
+                  269,
+                  322
+                ],
+                [
+                  284,
+                  296
+                ],
+                [
+                  300,
+                  276
+                ],
+                [
+                  317,
+                  245
+                ],
+                [
+                  333,
+                  207
+                ],
+                [
+                  349,
+                  168
+                ],
+                [
+                  359,
+                  141
+                ],
+                [
+                  363,
+                  120
+                ],
+                [
+                  368,
+                  106
+                ]
+              ],
+              "rotation": -35
+            }
+          ]
+        },
+        {
+          "path": "vest/lapels/double-6btn-medium-notch/vest-white__z109__neck_double_breasted+buttons_6+lapel_medium+style_lapel_notch.png",
+          "z": 109,
+          "fabric": false
+        }
+      ]
+    },
+    "double-6btn-medium-peak": {
+      "label": "double-6btn-medium-peak",
+      "layers": [
+        {
+          "path": "vest/lapels/double-6btn-medium-peak/vest-white__z107__neck_double_breasted+buttons_6+lapel_medium+style_lapel_peak.png",
+          "z": 107,
+          "fabric": true,
+          "rotation": 0,
+          "zones": [
+            {
+              "polygon": [
+                [
+                  223,
+                  97
+                ],
+                [
+                  214,
+                  120
+                ],
+                [
+                  206,
+                  141
+                ],
+                [
+                  227,
+                  149
+                ],
+                [
+                  252,
+                  113
+                ],
+                [
+                  249,
+                  85
+                ],
+                [
+                  237,
+                  89
+                ]
+              ],
+              "rotation": -20
+            },
+            {
+              "polygon": [
+                [
+                  189,
+                  140
+                ],
+                [
+                  202,
+                  166
+                ],
+                [
+                  223,
+                  200
+                ],
+                [
+                  239,
+                  225
+                ],
+                [
+                  257,
+                  247
+                ],
+                [
+                  279,
+                  271
+                ],
+                [
+                  292,
+                  286
+                ],
+                [
+                  313,
+                  253
+                ],
+                [
+                  302,
+                  230
+                ],
+                [
+                  287,
+                  201
+                ],
+                [
+                  273,
+                  169
+                ],
+                [
+                  262,
+                  141
+                ],
+                [
+                  257,
+                  123
+                ],
+                [
+                  253,
+                  113
+                ],
+                [
+                  229,
+                  151
+                ]
+              ],
+              "rotation": 35
+            },
+            {
+              "polygon": [
+                [
+                  367,
+                  110
+                ],
+                [
+                  388,
+                  150
+                ],
+                [
+                  418,
+                  142
+                ],
+                [
+                  403,
+                  109
+                ],
+                [
+                  400,
+                  93
+                ],
+                [
+                  373,
+                  83
+                ]
+              ],
+              "rotation": 20
+            },
+            {
+              "polygon": [
+                [
+                  430,
+                  139
+                ],
+                [
+                  392,
+                  150
+                ],
+                [
+                  368,
+                  110
+                ],
+                [
+                  358,
+                  145
+                ],
+                [
+                  342,
+                  187
+                ],
+                [
+                  328,
+                  220
+                ],
+                [
+                  316,
+                  248
+                ],
+                [
+                  290,
+                  292
+                ],
+                [
+                  268,
+                  322
+                ],
+                [
+                  286,
+                  316
+                ],
+                [
+                  324,
+                  284
+                ],
+                [
+                  355,
+                  259
+                ],
+                [
+                  381,
+                  226
+                ],
+                [
+                  403,
+                  194
+                ],
+                [
+                  419,
+                  168
+                ]
+              ],
+              "rotation": -35
+            }
+          ]
+        },
+        {
+          "path": "vest/lapels/double-6btn-medium-peak/vest-white__z109__neck_double_breasted+buttons_6+lapel_medium+style_lapel_peak.png",
+          "z": 109,
+          "fabric": false
+        }
+      ]
+    },
+    "single-4btn-shawl": {
+      "label": "single-4btn-shawl",
+      "layers": [
+        {
+          "path": "vest/lapels/single-4btn-shawl/vest-white__z107__neck_single_breasted+buttons_4+lapel_medium+style_lapel_round.png",
+          "z": 107,
+          "fabric": true,
+          "rotation": 0,
+          "zones": [
+            {
+              "polygon": [
+                [
+                  215,
+                  102
+                ],
+                [
+                  215,
+                  121
+                ],
+                [
+                  227,
+                  173
+                ],
+                [
+                  254,
+                  228
+                ],
+                [
+                  287,
+                  254
+                ],
+                [
+                  302,
+                  262
+                ],
+                [
+                  313,
+                  249
+                ],
+                [
+                  302,
+                  222
+                ],
+                [
+                  289,
+                  186
+                ],
+                [
+                  277,
+                  156
+                ],
+                [
+                  267,
+                  129
+                ],
+                [
+                  260,
+                  108
+                ],
+                [
+                  253,
+                  95
+                ],
+                [
+                  253,
+                  81
+                ]
+              ],
+              "rotation": 20
+            },
+            {
+              "polygon": [
+                [
+                  372,
+                  82
+                ],
+                [
+                  367,
+                  108
+                ],
+                [
+                  351,
+                  151
+                ],
+                [
+                  330,
+                  205
+                ],
+                [
+                  313,
+                  249
+                ],
+                [
+                  301,
+                  270
+                ],
+                [
+                  325,
+                  259
+                ],
+                [
+                  355,
+                  241
+                ],
+                [
+                  374,
+                  220
+                ],
+                [
+                  392,
+                  190
+                ],
+                [
+                  403,
+                  156
+                ],
+                [
+                  411,
+                  123
+                ],
+                [
+                  414,
+                  99
+                ]
+              ],
+              "rotation": -20
+            }
+          ]
+        },
+        {
+          "path": "vest/lapels/single-4btn-shawl/vest-white__z109__neck_single_breasted+buttons_4+lapel_medium+style_lapel_round.png",
+          "z": 109,
+          "fabric": false
+        }
+      ]
+    },
+    "single-5btn-shawl": {
+      "label": "single-5btn-shawl",
+      "layers": [
+        {
+          "path": "vest/lapels/single-5btn-shawl/vest-white__z107__neck_single_breasted+buttons_5+lapel_medium+style_lapel_round.png",
+          "z": 107,
+          "fabric": true,
+          "rotation": 0,
+          "zones": [
+            {
+              "polygon": [
+                [
+                  215,
+                  101
+                ],
+                [
+                  215,
+                  113
+                ],
+                [
+                  221,
+                  148
+                ],
+                [
+                  235,
+                  189
+                ],
+                [
+                  248,
+                  216
+                ],
+                [
+                  268,
+                  239
+                ],
+                [
+                  291,
+                  256
+                ],
+                [
+                  303,
+                  264
+                ],
+                [
+                  313,
+                  249
+                ],
+                [
+                  302,
+                  226
+                ],
+                [
+                  295,
+                  201
+                ],
+                [
+                  285,
+                  177
+                ],
+                [
+                  278,
+                  153
+                ],
+                [
+                  266,
+                  127
+                ],
+                [
+                  260,
+                  110
+                ],
+                [
+                  255,
+                  97
+                ],
+                [
+                  253,
+                  87
+                ],
+                [
+                  253,
+                  81
+                ]
+              ],
+              "rotation": 20
+            },
+            {
+              "polygon": [
+                [
+                  372,
+                  83
+                ],
+                [
+                  367,
+                  101
+                ],
+                [
+                  358,
+                  132
+                ],
+                [
+                  347,
+                  161
+                ],
+                [
+                  338,
+                  189
+                ],
+                [
+                  328,
+                  211
+                ],
+                [
+                  318,
+                  237
+                ],
+                [
+                  301,
+                  271
+                ],
+                [
+                  326,
+                  259
+                ],
+                [
+                  356,
+                  241
+                ],
+                [
+                  373,
+                  221
+                ],
+                [
+                  388,
+                  199
+                ],
+                [
+                  399,
+                  171
+                ],
+                [
+                  407,
+                  143
+                ],
+                [
+                  412,
+                  113
+                ],
+                [
+                  415,
+                  97
+                ]
+              ],
+              "rotation": -20
+            }
+          ]
+        },
+        {
+          "path": "vest/lapels/single-5btn-shawl/vest-white__z109__neck_single_breasted+buttons_5+lapel_medium+style_lapel_round.png",
+          "z": 109,
+          "fabric": false
+        }
+      ]
+    },
+    "double-6btn-shawl": {
+      "label": "double-6btn-shawl",
+      "layers": [
+        {
+          "path": "vest/lapels/double-6btn-shawl/vest-white__z107__neck_double_breasted+buttons_6+lapel_medium+style_lapel_round.png",
+          "z": 107,
+          "fabric": true,
+          "rotation": 0,
+          "zones": [
+            {
+              "polygon": [
+                [
+                  209,
+                  103
+                ],
+                [
+                  211,
+                  134
+                ],
+                [
+                  223,
+                  185
+                ],
+                [
+                  253,
+                  245
+                ],
+                [
+                  287,
+                  289
+                ],
+                [
+                  313,
+                  252
+                ],
+                [
+                  295,
+                  218
+                ],
+                [
+                  283,
+                  190
+                ],
+                [
+                  272,
+                  165
+                ],
+                [
+                  261,
+                  133
+                ],
+                [
+                  251,
+                  109
+                ],
+                [
+                  248,
+                  98
+                ],
+                [
+                  249,
+                  83
+                ]
+              ],
+              "rotation": 20
+            },
+            {
+              "polygon": [
+                [
+                  373,
+                  83
+                ],
+                [
+                  409,
+                  98
+                ],
+                [
+                  409,
+                  117
+                ],
+                [
+                  407,
+                  152
+                ],
+                [
+                  399,
+                  194
+                ],
+                [
+                  381,
+                  241
+                ],
+                [
+                  361,
+                  269
+                ],
+                [
+                  336,
+                  294
+                ],
+                [
+                  298,
+                  315
+                ],
+                [
+                  264,
+                  326
+                ],
+                [
+                  282,
+                  301
+                ],
+                [
+                  301,
+                  275
+                ],
+                [
+                  320,
+                  240
+                ],
+                [
+                  338,
+                  200
+                ],
+                [
+                  353,
+                  152
+                ],
+                [
+                  366,
+                  117
+                ]
+              ],
+              "rotation": -20
+            }
+          ]
+        },
+        {
+          "path": "vest/lapels/double-6btn-shawl/vest-white__z109__neck_double_breasted+buttons_6+lapel_medium+style_lapel_round.png",
+          "z": 109,
+          "fabric": false
+        }
+      ]
+    }
+  },
+  "hip-pocket": {
+    "hip_pockets_welt-single_breasted": {
+      "label": "hip_pockets_welt-single_breasted",
+      "layers": [
+        {
+          "path": "vest/hip-pocket/hip_pockets_welt-single_breasted/vest-white__z109__hip_pockets_welt+single_breasted.png",
+          "z": 109,
+          "fabric": true,
+          "rotation": 0,
+          "zones": null
+        }
+      ]
+    },
+    "hip_pockets_with_flap-single_breasted": {
+      "label": "hip_pockets_with_flap-single_breasted",
+      "layers": [
+        {
+          "path": "vest/hip-pocket/hip_pockets_with_flap-single_breasted/vest-white__z109__hip_pockets_with_flap+single_breasted.png",
+          "z": 109,
+          "fabric": true,
+          "rotation": 0,
+          "zones": null
+        }
+      ]
+    },
+    "hip_pockets_double_welt-single_breasted": {
+      "label": "hip_pockets_double_welt-single_breasted",
+      "layers": [
+        {
+          "path": "vest/hip-pocket/hip_pockets_double_welt-single_breasted/vest-white__z109__hip_pockets_double_welt+single_breasted.png",
+          "z": 109,
+          "fabric": true,
+          "rotation": 0,
+          "zones": null
+        }
+      ]
+    }
+  }
+}

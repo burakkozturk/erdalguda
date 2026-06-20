@@ -1,0 +1,32 @@
+# Zone config for stand-up-collar__z12002__necklines_mao+number_2+button_close_standard.png
+# Paste into LAYER_CONFIGS in shirtfabricblending.py
+#
+# Zone polygons are in pixel coordinates (x, y), origin top-left.
+# Set 'rotation' for each zone to the desired fabric angle (degrees).
+
+ZONES_STAND_UP_COLLAR__Z12002__NECKLINES_MAO_NUMBER_2_BUTTON_CLOSE_STANDARD = [
+    {
+        "polygon": [(142, 135), (133, 174), (149, 230), (215, 315), (268, 344), (281, 319), (303, 308), (237, 281), (199, 258), (160, 175), (159, 100)],
+        "rotation": 0,  # TODO: set angle for zone 0
+    },
+    {
+        "polygon": [(287, 316), (329, 296), (364, 279), (416, 227), (435, 182), (443, 127), (448, 114), (456, 175), (453, 231), (412, 296), (372, 332), (325, 358), (268, 365), (270, 340)],
+        "rotation": 0,  # TODO: set angle for zone 1
+    },
+    {
+        "polygon": [(162, 133), (202, 119), (377, 119), (424, 129), (438, 138), (446, 112), (428, 87), (365, 60), (251, 55), (203, 61), (173, 80), (158, 95)],
+        "rotation": 0,  # TODO: set angle for zone 2
+    },
+    {
+        "polygon": [(59, 155), (60, 241), (120, 226), (141, 215), (132, 177), (140, 134)],
+        "rotation": 0,  # TODO: set angle for zone 3
+    },
+    {
+        "polygon": [(455, 221), (538, 239), (536, 151), (482, 137), (454, 134), (456, 169)],
+        "rotation": 0,  # TODO: set angle for zone 4
+    },
+    {
+        "polygon": [(244, 282), (357, 281), (412, 227), (433, 174), (437, 141), (419, 130), (363, 119), (291, 119), (207, 123), (179, 129), (158, 137), (158, 162), (169, 194), (196, 245), (211, 263)],
+        "rotation": 0,  # TODO: set angle for zone 5
+    },
+]

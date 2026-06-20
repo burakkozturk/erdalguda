@@ -1,0 +1,17 @@
+.DS_Store
+
+# Backend
+backend/target/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/*.tsbuildinfo
+frontend/node_modules/.tmp/
+
+# Python fabric engine
+fabric-engine/.env
+fabric-engine/.vendor/
+fabric-engine/__pycache__/
+fabric-engine/**/__pycache__/

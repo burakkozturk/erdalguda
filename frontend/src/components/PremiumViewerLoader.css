@@ -1,0 +1,39 @@
+.premium-viewer-loader {
+  position: absolute;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 50% 46%, rgba(212, 175, 55, 0.12), transparent 34%),
+    rgba(4, 14, 31, 0.42);
+  backdrop-filter: blur(10px) saturate(1.08);
+  -webkit-backdrop-filter: blur(10px) saturate(1.08);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease;
+}
+
+.premium-viewer-loader.is-active {
+  opacity: 1;
+}
+
+.premium-viewer-loader-ring {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-top-color: #d4af37;
+  border-right-color: rgba(212, 175, 55, 0.62);
+  box-shadow:
+    0 0 22px rgba(212, 175, 55, 0.2),
+    inset 0 0 12px rgba(212, 175, 55, 0.08);
+  animation: premium-viewer-loader-spin 860ms linear infinite;
+}
+
+@keyframes premium-viewer-loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

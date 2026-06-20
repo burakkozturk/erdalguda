@@ -1,0 +1,1198 @@
+{
+  "garment": "tuxedo",
+  "assetRoot": "/assets/tuxedo",
+  "generatedFrom": "tuxedo_master_assets_config.json",
+  "categories": {
+    "base": [
+      {
+        "id": "length_long+cut_slim",
+        "category": "base",
+        "file": "base/length_long+cut_slim.png",
+        "src": "/assets/tuxedo/base/length_long+cut_slim.png",
+        "zIndex": 31,
+        "kind": "base",
+        "options": {
+          "length": "long",
+          "unknownTokens": [
+            "cut_slim"
+          ]
+        },
+        "fabricDependent": true,
+        "zones": [
+          {
+            "polygon": [
+              [
+                520,
+                54
+              ],
+              [
+                519,
+                127
+              ],
+              [
+                519,
+                160
+              ],
+              [
+                519,
+                215
+              ],
+              [
+                522,
+                252
+              ],
+              [
+                507,
+                258
+              ],
+              [
+                472,
+                264
+              ],
+              [
+                440,
+                268
+              ],
+              [
+                407,
+                266
+              ],
+              [
+                364,
+                251
+              ],
+              [
+                338,
+                243
+              ],
+              [
+                362,
+                186
+              ],
+              [
+                317,
+                159
+              ],
+              [
+                263,
+                135
+              ],
+              [
+                221,
+                110
+              ],
+              [
+                172,
+                87
+              ],
+              [
+                113,
+                55
+              ],
+              [
+                517,
+                53
+              ]
+            ],
+            "rotation": 90.0
+          },
+          {
+            "polygon": [
+              [
+                112,
+                57
+              ],
+              [
+                72,
+                189
+              ],
+              [
+                319,
+                288
+              ],
+              [
+                360,
+                189
+              ],
+              [
+                113,
+                56
+              ]
+            ],
+            "rotation": -67.0
+          },
+          {
+            "polygon": [
+              [
+                524,
+                257
+              ],
+              [
+                545,
+                255
+              ],
+              [
+                541,
+                56
+              ],
+              [
+                518,
+                56
+              ],
+              [
+                522,
+                254
+              ]
+            ],
+            "rotation": -2.0
+          }
+        ]
+      },
+      {
+        "id": "tira_slim",
+        "category": "base",
+        "file": "base/tira_slim.png",
+        "src": "/assets/tuxedo/base/tira_slim.png",
+        "zIndex": 39,
+        "kind": "base",
+        "options": {
+          "unknownTokens": [
+            "tira_slim"
+          ]
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "interior+espalda_abajo+length_long",
+        "category": "base",
+        "file": "base/interior+espalda_abajo+length_long.png",
+        "src": "/assets/tuxedo/base/interior+espalda_abajo+length_long.png",
+        "zIndex": 46,
+        "kind": "base",
+        "options": {
+          "bodyPart": "espalda_abajo",
+          "length": "long"
+        },
+        "fabricDependent": false
+      },
+      {
+        "id": "interior+espalda_arriba",
+        "category": "base",
+        "file": "base/interior+espalda_arriba.png",
+        "src": "/assets/tuxedo/base/interior+espalda_arriba.png",
+        "zIndex": 47,
+        "kind": "base",
+        "options": {
+          "bodyPart": "espalda_arriba"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "negra",
+        "category": "base",
+        "file": "base/negra.png",
+        "src": "/assets/tuxedo/base/negra.png",
+        "zIndex": 105,
+        "kind": "base",
+        "options": {
+          "bodyPart": "negra"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "interior+sleeves",
+        "category": "base",
+        "file": "base/interior+sleeves.png",
+        "src": "/assets/tuxedo/base/interior+sleeves.png",
+        "zIndex": 120,
+        "kind": "base",
+        "options": {
+          "bodyPart": "sleeves"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "bottom_double_breasted+length_long",
+        "category": "base",
+        "file": "base/bottom_double_breasted+length_long.png",
+        "src": "/assets/tuxedo/base/bottom_double_breasted+length_long.png",
+        "zIndex": 130,
+        "kind": "base",
+        "options": {
+          "bodyPart": "bottom",
+          "breastStyle": "double",
+          "length": "long"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "bottom_single_breasted+length_long+hemline_open",
+        "category": "base",
+        "file": "base/bottom_single_breasted+length_long+hemline_open.png",
+        "src": "/assets/tuxedo/base/bottom_single_breasted+length_long+hemline_open.png",
+        "zIndex": 130,
+        "kind": "base",
+        "options": {
+          "bodyPart": "bottom",
+          "breastStyle": "single",
+          "length": "long",
+          "hemline": "open"
+        },
+        "fabricDependent": true
+      }
+    ],
+    "lapels": [
+      {
+        "id": "neck_double_breasted+buttons_2+lapel_medium+style_lapel_notch",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_2+lapel_medium+style_lapel_notch.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_2+lapel_medium+style_lapel_notch.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 2,
+          "lapelWidth": "standard",
+          "lapelStyle": "notch"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_2+lapel_medium+style_lapel_peak",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_2+lapel_medium+style_lapel_peak.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_2+lapel_medium+style_lapel_peak.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 2,
+          "lapelWidth": "standard",
+          "lapelStyle": "peak"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_2+lapel_medium+style_lapel_round",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_2+lapel_medium+style_lapel_round.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_2+lapel_medium+style_lapel_round.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 2,
+          "lapelWidth": "standard",
+          "lapelStyle": "shawl"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_2+lapel_narrow+style_lapel_notch",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_2+lapel_narrow+style_lapel_notch.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_2+lapel_narrow+style_lapel_notch.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 2,
+          "lapelWidth": "slim",
+          "lapelStyle": "notch"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_2+lapel_narrow+style_lapel_peak",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_2+lapel_narrow+style_lapel_peak.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_2+lapel_narrow+style_lapel_peak.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 2,
+          "lapelWidth": "slim",
+          "lapelStyle": "peak"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_2+lapel_narrow+style_lapel_round",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_2+lapel_narrow+style_lapel_round.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_2+lapel_narrow+style_lapel_round.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 2,
+          "lapelWidth": "slim",
+          "lapelStyle": "shawl"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_2+lapel_wide+style_lapel_notch",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_2+lapel_wide+style_lapel_notch.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_2+lapel_wide+style_lapel_notch.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 2,
+          "lapelWidth": "wide",
+          "lapelStyle": "notch"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_2+lapel_wide+style_lapel_peak",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_2+lapel_wide+style_lapel_peak.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_2+lapel_wide+style_lapel_peak.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 2,
+          "lapelWidth": "wide",
+          "lapelStyle": "peak"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_2+lapel_wide+style_lapel_round",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_2+lapel_wide+style_lapel_round.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_2+lapel_wide+style_lapel_round.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 2,
+          "lapelWidth": "wide",
+          "lapelStyle": "shawl"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_4+lapel_medium+style_lapel_notch",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_4+lapel_medium+style_lapel_notch.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_4+lapel_medium+style_lapel_notch.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 4,
+          "lapelWidth": "standard",
+          "lapelStyle": "notch"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_4+lapel_medium+style_lapel_peak",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_4+lapel_medium+style_lapel_peak.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_4+lapel_medium+style_lapel_peak.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 4,
+          "lapelWidth": "standard",
+          "lapelStyle": "peak"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_4+lapel_medium+style_lapel_round",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_4+lapel_medium+style_lapel_round.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_4+lapel_medium+style_lapel_round.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 4,
+          "lapelWidth": "standard",
+          "lapelStyle": "shawl"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_4+lapel_narrow+style_lapel_notch",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_4+lapel_narrow+style_lapel_notch.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_4+lapel_narrow+style_lapel_notch.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 4,
+          "lapelWidth": "slim",
+          "lapelStyle": "notch"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_4+lapel_narrow+style_lapel_peak",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_4+lapel_narrow+style_lapel_peak.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_4+lapel_narrow+style_lapel_peak.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 4,
+          "lapelWidth": "slim",
+          "lapelStyle": "peak"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_4+lapel_narrow+style_lapel_round",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_4+lapel_narrow+style_lapel_round.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_4+lapel_narrow+style_lapel_round.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 4,
+          "lapelWidth": "slim",
+          "lapelStyle": "shawl"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_4+lapel_wide+style_lapel_notch",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_4+lapel_wide+style_lapel_notch.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_4+lapel_wide+style_lapel_notch.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 4,
+          "lapelWidth": "wide",
+          "lapelStyle": "notch"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_4+lapel_wide+style_lapel_peak",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_4+lapel_wide+style_lapel_peak.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_4+lapel_wide+style_lapel_peak.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 4,
+          "lapelWidth": "wide",
+          "lapelStyle": "peak"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_4+lapel_wide+style_lapel_round",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_4+lapel_wide+style_lapel_round.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_4+lapel_wide+style_lapel_round.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 4,
+          "lapelWidth": "wide",
+          "lapelStyle": "shawl"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_6+lapel_medium+style_lapel_notch",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_6+lapel_medium+style_lapel_notch.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_6+lapel_medium+style_lapel_notch.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 6,
+          "lapelWidth": "standard",
+          "lapelStyle": "notch"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_6+lapel_medium+style_lapel_peak",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_6+lapel_medium+style_lapel_peak.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_6+lapel_medium+style_lapel_peak.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 6,
+          "lapelWidth": "standard",
+          "lapelStyle": "peak"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_6+lapel_medium+style_lapel_round",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_6+lapel_medium+style_lapel_round.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_6+lapel_medium+style_lapel_round.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 6,
+          "lapelWidth": "standard",
+          "lapelStyle": "shawl"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_6+lapel_narrow+style_lapel_notch",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_6+lapel_narrow+style_lapel_notch.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_6+lapel_narrow+style_lapel_notch.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 6,
+          "lapelWidth": "slim",
+          "lapelStyle": "notch"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_6+lapel_narrow+style_lapel_peak",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_6+lapel_narrow+style_lapel_peak.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_6+lapel_narrow+style_lapel_peak.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 6,
+          "lapelWidth": "slim",
+          "lapelStyle": "peak"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_6+lapel_narrow+style_lapel_round",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_6+lapel_narrow+style_lapel_round.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_6+lapel_narrow+style_lapel_round.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 6,
+          "lapelWidth": "slim",
+          "lapelStyle": "shawl"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_6+lapel_wide+style_lapel_notch",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_6+lapel_wide+style_lapel_notch.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_6+lapel_wide+style_lapel_notch.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 6,
+          "lapelWidth": "wide",
+          "lapelStyle": "notch"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_6+lapel_wide+style_lapel_peak",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_6+lapel_wide+style_lapel_peak.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_6+lapel_wide+style_lapel_peak.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 6,
+          "lapelWidth": "wide",
+          "lapelStyle": "peak"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_double_breasted+buttons_6+lapel_wide+style_lapel_round",
+        "category": "lapels",
+        "file": "lapels/neck_double_breasted+buttons_6+lapel_wide+style_lapel_round.png",
+        "src": "/assets/tuxedo/lapels/neck_double_breasted+buttons_6+lapel_wide+style_lapel_round.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 6,
+          "lapelWidth": "wide",
+          "lapelStyle": "shawl"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_single_breasted+buttons_1+lapel_medium+style_lapel_notch",
+        "category": "lapels",
+        "file": "lapels/neck_single_breasted+buttons_1+lapel_medium+style_lapel_notch.png",
+        "src": "/assets/tuxedo/lapels/neck_single_breasted+buttons_1+lapel_medium+style_lapel_notch.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 1,
+          "lapelWidth": "standard",
+          "lapelStyle": "notch"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_single_breasted+buttons_1+lapel_medium+style_lapel_peak",
+        "category": "lapels",
+        "file": "lapels/neck_single_breasted+buttons_1+lapel_medium+style_lapel_peak.png",
+        "src": "/assets/tuxedo/lapels/neck_single_breasted+buttons_1+lapel_medium+style_lapel_peak.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 1,
+          "lapelWidth": "standard",
+          "lapelStyle": "peak"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_single_breasted+buttons_1+lapel_medium+style_lapel_round",
+        "category": "lapels",
+        "file": "lapels/neck_single_breasted+buttons_1+lapel_medium+style_lapel_round.png",
+        "src": "/assets/tuxedo/lapels/neck_single_breasted+buttons_1+lapel_medium+style_lapel_round.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 1,
+          "lapelWidth": "standard",
+          "lapelStyle": "shawl"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_single_breasted+buttons_1+lapel_narrow+style_lapel_notch",
+        "category": "lapels",
+        "file": "lapels/neck_single_breasted+buttons_1+lapel_narrow+style_lapel_notch.png",
+        "src": "/assets/tuxedo/lapels/neck_single_breasted+buttons_1+lapel_narrow+style_lapel_notch.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 1,
+          "lapelWidth": "slim",
+          "lapelStyle": "notch"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_single_breasted+buttons_1+lapel_narrow+style_lapel_peak",
+        "category": "lapels",
+        "file": "lapels/neck_single_breasted+buttons_1+lapel_narrow+style_lapel_peak.png",
+        "src": "/assets/tuxedo/lapels/neck_single_breasted+buttons_1+lapel_narrow+style_lapel_peak.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 1,
+          "lapelWidth": "slim",
+          "lapelStyle": "peak"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_single_breasted+buttons_1+lapel_narrow+style_lapel_round",
+        "category": "lapels",
+        "file": "lapels/neck_single_breasted+buttons_1+lapel_narrow+style_lapel_round.png",
+        "src": "/assets/tuxedo/lapels/neck_single_breasted+buttons_1+lapel_narrow+style_lapel_round.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 1,
+          "lapelWidth": "slim",
+          "lapelStyle": "shawl"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_single_breasted+buttons_1+lapel_wide+style_lapel_notch",
+        "category": "lapels",
+        "file": "lapels/neck_single_breasted+buttons_1+lapel_wide+style_lapel_notch.png",
+        "src": "/assets/tuxedo/lapels/neck_single_breasted+buttons_1+lapel_wide+style_lapel_notch.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 1,
+          "lapelWidth": "wide",
+          "lapelStyle": "notch"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_single_breasted+buttons_1+lapel_wide+style_lapel_peak",
+        "category": "lapels",
+        "file": "lapels/neck_single_breasted+buttons_1+lapel_wide+style_lapel_peak.png",
+        "src": "/assets/tuxedo/lapels/neck_single_breasted+buttons_1+lapel_wide+style_lapel_peak.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 1,
+          "lapelWidth": "wide",
+          "lapelStyle": "peak"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_single_breasted+buttons_1+lapel_wide+style_lapel_round",
+        "category": "lapels",
+        "file": "lapels/neck_single_breasted+buttons_1+lapel_wide+style_lapel_round.png",
+        "src": "/assets/tuxedo/lapels/neck_single_breasted+buttons_1+lapel_wide+style_lapel_round.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 1,
+          "lapelWidth": "wide",
+          "lapelStyle": "shawl"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_single_breasted+buttons_2+lapel_medium+style_lapel_notch",
+        "category": "lapels",
+        "file": "lapels/neck_single_breasted+buttons_2+lapel_medium+style_lapel_notch.png",
+        "src": "/assets/tuxedo/lapels/neck_single_breasted+buttons_2+lapel_medium+style_lapel_notch.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 2,
+          "lapelWidth": "standard",
+          "lapelStyle": "notch"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_single_breasted+buttons_2+lapel_medium+style_lapel_peak",
+        "category": "lapels",
+        "file": "lapels/neck_single_breasted+buttons_2+lapel_medium+style_lapel_peak.png",
+        "src": "/assets/tuxedo/lapels/neck_single_breasted+buttons_2+lapel_medium+style_lapel_peak.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 2,
+          "lapelWidth": "standard",
+          "lapelStyle": "peak"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_single_breasted+buttons_2+lapel_medium+style_lapel_round",
+        "category": "lapels",
+        "file": "lapels/neck_single_breasted+buttons_2+lapel_medium+style_lapel_round.png",
+        "src": "/assets/tuxedo/lapels/neck_single_breasted+buttons_2+lapel_medium+style_lapel_round.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 2,
+          "lapelWidth": "standard",
+          "lapelStyle": "shawl"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_single_breasted+buttons_2+lapel_narrow+style_lapel_notch",
+        "category": "lapels",
+        "file": "lapels/neck_single_breasted+buttons_2+lapel_narrow+style_lapel_notch.png",
+        "src": "/assets/tuxedo/lapels/neck_single_breasted+buttons_2+lapel_narrow+style_lapel_notch.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 2,
+          "lapelWidth": "slim",
+          "lapelStyle": "notch"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_single_breasted+buttons_2+lapel_narrow+style_lapel_peak",
+        "category": "lapels",
+        "file": "lapels/neck_single_breasted+buttons_2+lapel_narrow+style_lapel_peak.png",
+        "src": "/assets/tuxedo/lapels/neck_single_breasted+buttons_2+lapel_narrow+style_lapel_peak.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 2,
+          "lapelWidth": "slim",
+          "lapelStyle": "peak"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_single_breasted+buttons_2+lapel_narrow+style_lapel_round",
+        "category": "lapels",
+        "file": "lapels/neck_single_breasted+buttons_2+lapel_narrow+style_lapel_round.png",
+        "src": "/assets/tuxedo/lapels/neck_single_breasted+buttons_2+lapel_narrow+style_lapel_round.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 2,
+          "lapelWidth": "slim",
+          "lapelStyle": "shawl"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_single_breasted+buttons_2+lapel_wide+style_lapel_notch",
+        "category": "lapels",
+        "file": "lapels/neck_single_breasted+buttons_2+lapel_wide+style_lapel_notch.png",
+        "src": "/assets/tuxedo/lapels/neck_single_breasted+buttons_2+lapel_wide+style_lapel_notch.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 2,
+          "lapelWidth": "wide",
+          "lapelStyle": "notch"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_single_breasted+buttons_2+lapel_wide+style_lapel_peak",
+        "category": "lapels",
+        "file": "lapels/neck_single_breasted+buttons_2+lapel_wide+style_lapel_peak.png",
+        "src": "/assets/tuxedo/lapels/neck_single_breasted+buttons_2+lapel_wide+style_lapel_peak.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 2,
+          "lapelWidth": "wide",
+          "lapelStyle": "peak"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "neck_single_breasted+buttons_2+lapel_wide+style_lapel_round",
+        "category": "lapels",
+        "file": "lapels/neck_single_breasted+buttons_2+lapel_wide+style_lapel_round.png",
+        "src": "/assets/tuxedo/lapels/neck_single_breasted+buttons_2+lapel_wide+style_lapel_round.png",
+        "zIndex": 119,
+        "kind": "neck",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 2,
+          "lapelWidth": "wide",
+          "lapelStyle": "shawl"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "breast_pocket_classic+neck_double_breasted+buttons_2+lapel_wide+style_lapel_notch",
+        "category": "lapels",
+        "file": "lapels/breast_pocket_classic+neck_double_breasted+buttons_2+lapel_wide+style_lapel_notch.png",
+        "src": "/assets/tuxedo/lapels/breast_pocket_classic+neck_double_breasted+buttons_2+lapel_wide+style_lapel_notch.png",
+        "zIndex": 150,
+        "kind": "neckWithBreastPocket",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 2,
+          "lapelWidth": "wide",
+          "lapelStyle": "notch",
+          "hasBreastPocket": true
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "breast_pocket_classic+neck_double_breasted+buttons_2+lapel_wide+style_lapel_peak",
+        "category": "lapels",
+        "file": "lapels/breast_pocket_classic+neck_double_breasted+buttons_2+lapel_wide+style_lapel_peak.png",
+        "src": "/assets/tuxedo/lapels/breast_pocket_classic+neck_double_breasted+buttons_2+lapel_wide+style_lapel_peak.png",
+        "zIndex": 150,
+        "kind": "neckWithBreastPocket",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 2,
+          "lapelWidth": "wide",
+          "lapelStyle": "peak",
+          "hasBreastPocket": true
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "breast_pocket_classic+neck_double_breasted+buttons_2+lapel_wide+style_lapel_round",
+        "category": "lapels",
+        "file": "lapels/breast_pocket_classic+neck_double_breasted+buttons_2+lapel_wide+style_lapel_round.png",
+        "src": "/assets/tuxedo/lapels/breast_pocket_classic+neck_double_breasted+buttons_2+lapel_wide+style_lapel_round.png",
+        "zIndex": 150,
+        "kind": "neckWithBreastPocket",
+        "options": {
+          "breastStyle": "double",
+          "buttonCount": 2,
+          "lapelWidth": "wide",
+          "lapelStyle": "shawl",
+          "hasBreastPocket": true
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "breast_pocket_classic+neck_single_breasted+buttons_1+lapel_wide+style_lapel_notch",
+        "category": "lapels",
+        "file": "lapels/breast_pocket_classic+neck_single_breasted+buttons_1+lapel_wide+style_lapel_notch.png",
+        "src": "/assets/tuxedo/lapels/breast_pocket_classic+neck_single_breasted+buttons_1+lapel_wide+style_lapel_notch.png",
+        "zIndex": 150,
+        "kind": "neckWithBreastPocket",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 1,
+          "lapelWidth": "wide",
+          "lapelStyle": "notch",
+          "hasBreastPocket": true
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "breast_pocket_classic+neck_single_breasted+buttons_1+lapel_wide+style_lapel_peak",
+        "category": "lapels",
+        "file": "lapels/breast_pocket_classic+neck_single_breasted+buttons_1+lapel_wide+style_lapel_peak.png",
+        "src": "/assets/tuxedo/lapels/breast_pocket_classic+neck_single_breasted+buttons_1+lapel_wide+style_lapel_peak.png",
+        "zIndex": 150,
+        "kind": "neckWithBreastPocket",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 1,
+          "lapelWidth": "wide",
+          "lapelStyle": "peak",
+          "hasBreastPocket": true
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "breast_pocket_classic+neck_single_breasted+buttons_1+lapel_wide+style_lapel_round",
+        "category": "lapels",
+        "file": "lapels/breast_pocket_classic+neck_single_breasted+buttons_1+lapel_wide+style_lapel_round.png",
+        "src": "/assets/tuxedo/lapels/breast_pocket_classic+neck_single_breasted+buttons_1+lapel_wide+style_lapel_round.png",
+        "zIndex": 150,
+        "kind": "neckWithBreastPocket",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 1,
+          "lapelWidth": "wide",
+          "lapelStyle": "shawl",
+          "hasBreastPocket": true
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "breast_pocket_classic+neck_single_breasted+buttons_2+lapel_wide+style_lapel_notch",
+        "category": "lapels",
+        "file": "lapels/breast_pocket_classic+neck_single_breasted+buttons_2+lapel_wide+style_lapel_notch.png",
+        "src": "/assets/tuxedo/lapels/breast_pocket_classic+neck_single_breasted+buttons_2+lapel_wide+style_lapel_notch.png",
+        "zIndex": 150,
+        "kind": "neckWithBreastPocket",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 2,
+          "lapelWidth": "wide",
+          "lapelStyle": "notch",
+          "hasBreastPocket": true
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "breast_pocket_classic+neck_single_breasted+buttons_2+lapel_wide+style_lapel_peak",
+        "category": "lapels",
+        "file": "lapels/breast_pocket_classic+neck_single_breasted+buttons_2+lapel_wide+style_lapel_peak.png",
+        "src": "/assets/tuxedo/lapels/breast_pocket_classic+neck_single_breasted+buttons_2+lapel_wide+style_lapel_peak.png",
+        "zIndex": 150,
+        "kind": "neckWithBreastPocket",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 2,
+          "lapelWidth": "wide",
+          "lapelStyle": "peak",
+          "hasBreastPocket": true
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "breast_pocket_classic+neck_single_breasted+buttons_2+lapel_wide+style_lapel_round",
+        "category": "lapels",
+        "file": "lapels/breast_pocket_classic+neck_single_breasted+buttons_2+lapel_wide+style_lapel_round.png",
+        "src": "/assets/tuxedo/lapels/breast_pocket_classic+neck_single_breasted+buttons_2+lapel_wide+style_lapel_round.png",
+        "zIndex": 150,
+        "kind": "neckWithBreastPocket",
+        "options": {
+          "breastStyle": "single",
+          "buttonCount": 2,
+          "lapelWidth": "wide",
+          "lapelStyle": "shawl",
+          "hasBreastPocket": true
+        },
+        "fabricDependent": true
+      }
+    ],
+    "hip-pocket": [
+      {
+        "id": "front_pocket+diagonal",
+        "category": "hip-pocket",
+        "file": "hip-pocket/front_pocket+diagonal.png",
+        "src": "/assets/tuxedo/hip-pocket/front_pocket+diagonal.png",
+        "zIndex": 33,
+        "kind": "hipPocket",
+        "options": {
+          "unknownTokens": [
+            "front_pocket",
+            "diagonal"
+          ]
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "back_pocket+with_button",
+        "category": "hip-pocket",
+        "file": "hip-pocket/back_pocket+with_button.png",
+        "src": "/assets/tuxedo/hip-pocket/back_pocket+with_button.png",
+        "zIndex": 38,
+        "kind": "hipPocket",
+        "options": {
+          "unknownTokens": [
+            "back_pocket",
+            "with_button"
+          ]
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "buttons+back_pocket+with_button",
+        "category": "hip-pocket",
+        "file": "hip-pocket/buttons+back_pocket+with_button.png",
+        "src": "/assets/tuxedo/hip-pocket/buttons+back_pocket+with_button.png",
+        "zIndex": 39,
+        "kind": "hipPocket",
+        "options": {
+          "unknownTokens": [
+            "buttons",
+            "back_pocket",
+            "with_button"
+          ]
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "breast_pocket_classic",
+        "category": "hip-pocket",
+        "file": "hip-pocket/breast_pocket_classic.png",
+        "src": "/assets/tuxedo/hip-pocket/breast_pocket_classic.png",
+        "zIndex": 150,
+        "kind": "neckWithBreastPocket",
+        "options": {
+          "hasBreastPocket": true
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "hip_pockets_double_welt+fit_slim",
+        "category": "hip-pocket",
+        "file": "hip-pocket/hip_pockets_double_welt+fit_slim.png",
+        "src": "/assets/tuxedo/hip-pocket/hip_pockets_double_welt+fit_slim.png",
+        "zIndex": 150,
+        "kind": "hipPocket",
+        "options": {
+          "pocketStyle": "double_welted",
+          "fit": "slim"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "hip_pockets_double_welt+fit_slim+third",
+        "category": "hip-pocket",
+        "file": "hip-pocket/hip_pockets_double_welt+fit_slim+third.png",
+        "src": "/assets/tuxedo/hip-pocket/hip_pockets_double_welt+fit_slim+third.png",
+        "zIndex": 150,
+        "kind": "hipPocket",
+        "options": {
+          "pocketStyle": "double_welted",
+          "fit": "slim",
+          "third": true
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "hip_pockets_with_flap+fit_slim",
+        "category": "hip-pocket",
+        "file": "hip-pocket/hip_pockets_with_flap+fit_slim.png",
+        "src": "/assets/tuxedo/hip-pocket/hip_pockets_with_flap+fit_slim.png",
+        "zIndex": 150,
+        "kind": "hipPocket",
+        "options": {
+          "pocketStyle": "with_flap",
+          "fit": "slim"
+        },
+        "fabricDependent": true
+      },
+      {
+        "id": "hip_pockets_with_flap+fit_slim+third",
+        "category": "hip-pocket",
+        "file": "hip-pocket/hip_pockets_with_flap+fit_slim+third.png",
+        "src": "/assets/tuxedo/hip-pocket/hip_pockets_with_flap+fit_slim+third.png",
+        "zIndex": 150,
+        "kind": "hipPocket",
+        "options": {
+          "pocketStyle": "with_flap",
+          "fit": "slim",
+          "third": true
+        },
+        "fabricDependent": true
+      }
+    ],
+    "misc": []
+  },
+  "totals": {
+    "byCategory": {
+      "base": 8,
+      "lapels": 54,
+      "hip-pocket": 8,
+      "misc": 0
+    },
+    "byKind": {
+      "base": 8,
+      "neck": 45,
+      "neckWithBreastPocket": 10,
+      "hipPocket": 7
+    },
+    "total": 70,
+    "withZones": 1,
+    "missingFiles": 0
+  }
+}

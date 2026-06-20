@@ -1,0 +1,32 @@
+# Zone config for pinned-collar__z12002__necklines_pin+number_2+button_close_standard.png
+# Paste into LAYER_CONFIGS in shirtfabricblending.py
+#
+# Zone polygons are in pixel coordinates (x, y), origin top-left.
+# Set 'rotation' for each zone to the desired fabric angle (degrees).
+
+ZONES_PINNED_COLLAR__Z12002__NECKLINES_PIN_NUMBER_2_BUTTON_CLOSE_STANDARD = [
+    {
+        "polygon": [(133, 134), (125, 228), (189, 382), (215, 435), (245, 408), (261, 378), (283, 323), (296, 307), (257, 275), (217, 241), (170, 180), (146, 137), (143, 98)],
+        "rotation": 0,  # TODO: set angle for zone 0
+    },
+    {
+        "polygon": [(297, 314), (317, 345), (339, 392), (381, 440), (394, 417), (406, 394), (427, 353), (450, 304), (465, 264), (480, 213), (472, 158), (462, 105), (449, 139), (419, 187), (393, 226), (355, 267)],
+        "rotation": 0,  # TODO: set angle for zone 1
+    },
+    {
+        "polygon": [(154, 142), (180, 129), (313, 127), (379, 130), (423, 137), (441, 145), (459, 104), (451, 79), (424, 62), (364, 51), (278, 45), (229, 49), (177, 59), (150, 84), (143, 96), (145, 124)],
+        "rotation": 0,  # TODO: set angle for zone 2
+    },
+    {
+        "polygon": [(58, 245), (73, 240), (124, 229), (133, 137), (100, 142), (58, 158)],
+        "rotation": 0,  # TODO: set angle for zone 3
+    },
+    {
+        "polygon": [(477, 229), (538, 239), (537, 153), (494, 141), (470, 139), (478, 209)],
+        "rotation": 0,  # TODO: set angle for zone 4
+    },
+    {
+        "polygon": [(255, 271), (344, 273), (404, 206), (440, 146), (396, 134), (310, 131), (236, 129), (186, 130), (154, 145), (171, 181), (210, 233), (232, 253)],
+        "rotation": 0,  # TODO: set angle for zone 5
+    },
+]

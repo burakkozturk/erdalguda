@@ -1,0 +1,46 @@
+{
+  "layerFile": "squared-french-cuff__z12004__sleeves_long+cuffs_style_squared_french_cuff.png",
+  "zones": [
+    {
+      "polygon": [
+        [
+          47,
+          559
+        ],
+        [
+          48,
+          798
+        ],
+        [
+          60,
+          797
+        ],
+        [
+          57,
+          698
+        ],
+        [
+          62,
+          688
+        ],
+        [
+          62,
+          641
+        ],
+        [
+          62,
+          593
+        ],
+        [
+          63,
+          565
+        ],
+        [
+          55,
+          560
+        ]
+      ],
+      "rotation": 0.0
+    }
+  ]
+}

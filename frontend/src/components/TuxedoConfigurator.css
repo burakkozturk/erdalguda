@@ -1,0 +1,529 @@
+/* TuxedoConfigurator — scoped with tc- prefix to avoid collisions */
+
+/* -----------------------------------------------------------------------
+   Root
+   --------------------------------------------------------------------- */
+
+.tc-root {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* -----------------------------------------------------------------------
+   Style switcher bar
+   --------------------------------------------------------------------- */
+
+.tc-styleBar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 16px;
+}
+
+.cfg-accordionContent .tc-styleBar {
+  padding: 12px;
+}
+
+.cfg-accordionContent .tc-optionGroup {
+  padding: 12px 12px 10px;
+}
+
+.tc-styleBarLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+  margin-bottom: 6px;
+}
+
+.tc-styleButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tc-styleButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid transparent;
+  border-radius: 8px;
+  background: white;
+  color: #444;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.1s, background 0.1s;
+}
+
+.tc-styleButton::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid #ccc;
+  flex-shrink: 0;
+  transition: background 0.1s, border-color 0.1s;
+}
+
+.tc-styleButton:hover:not(:disabled) {
+  border-color: #e0e0e0;
+  background: #f9f9f9;
+}
+
+.tc-styleButton.active {
+  background: #f8f8ff;
+  border-color: #1a1a2e;
+  color: #1a1a2e;
+  font-weight: 600;
+}
+
+.tc-styleButton.active::before {
+  background: #1a1a2e;
+  border-color: #1a1a2e;
+}
+
+.tc-styleButton:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+/* -----------------------------------------------------------------------
+   Fabric selector
+   --------------------------------------------------------------------- */
+
+.tc-fabricBar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+}
+
+.cfg-accordionContent .tc-fabricBar {
+  padding: 12px;
+}
+
+.cfg-accordionContent .tc-fabricBarLabel,
+.cfg-accordionContent .tc-styleBarLabel {
+  display: none;
+}
+
+.tc-fabricBarLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+  margin-bottom: 2px;
+}
+
+.tc-fabricCards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.tc-fabricCard {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: left;
+  gap: 8px;
+  padding: 8px;
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  font: inherit;
+  width: 100%;
+  transition: border-color 0.12s, background 0.12s, transform 0.12s;
+}
+
+.tc-fabricCard:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.tc-fabricCard:hover:not(:disabled) {
+  border-color: #ccc;
+}
+
+.tc-fabricCard.active {
+  border-color: #1a1a2e;
+  background: #f8f8ff;
+}
+
+.tc-fabricCard:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.tc-fabricSwatch {
+  width: 100%;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f0f0f0;
+}
+
+.tc-fabricSwatch img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tc-fabricSwatchFallback {
+  width: 100%;
+  height: 100%;
+  background: #111111;
+}
+
+.tc-fabricInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.tc-fabricLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a1a2e;
+  line-height: 1.25;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+/* -----------------------------------------------------------------------
+   Option bar (lapel / pocket)
+   --------------------------------------------------------------------- */
+
+.tc-optionBar {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.tc-optionGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 16px 16px 12px;
+}
+
+.tc-optionGroupLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.tc-optionButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tc-optionButton {
+  border: 1.5px solid #e8e8e8;
+  background: white;
+  color: #444;
+  border-radius: 6px;
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  font: inherit;
+  transition: border-color 0.1s, background 0.1s, color 0.1s;
+  text-align: center;
+}
+
+.tc-optionButton:hover:not(:disabled) {
+  border-color: #ccc;
+}
+
+.tc-optionButton.active {
+  background: #1a1a2e;
+  border-color: #1a1a2e;
+  color: white;
+  font-weight: 600;
+}
+
+.tc-optionButton:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+/* -----------------------------------------------------------------------
+   Layer viewer
+   --------------------------------------------------------------------- */
+
+.tc-viewerCard {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tc-viewer {
+  position: relative;
+  width: min(680px, 100%);
+  aspect-ratio: 3 / 5;
+  background: transparent;
+}
+
+/* viewer-only mode — scale to ~80% of the viewport's vertical space while
+   honouring the silhouette's 3:5 aspect-ratio. */
+.tc-viewer-standalone {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vh 2vw;
+  box-sizing: border-box;
+}
+
+.tc-viewer-standalone .tc-viewer {
+  width: auto;
+  height: 80vh;
+  max-width: min(90%, 600px);
+  max-height: 90%;
+}
+
+.tc-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* -----------------------------------------------------------------------
+   Responsive
+   --------------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+  .tc-optionBar {
+    gap: 16px 24px;
+  }
+}
+
+/* -----------------------------------------------------------------------
+   Dark theme overrides ([data-theme="admin"])
+   --------------------------------------------------------------------- */
+
+[data-theme="admin"] .tc-styleBarLabel,
+[data-theme="admin"] .tc-fabricBarLabel,
+[data-theme="admin"] .tc-optionGroupLabel {
+  color: var(--text-faint);
+}
+
+[data-theme="admin"] .tc-styleButton {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+
+[data-theme="admin"] .tc-styleButton::before {
+  border-color: var(--border);
+}
+
+[data-theme="admin"] .tc-styleButton:hover:not(:disabled) {
+  border-color: var(--border-focus);
+  background: var(--bg-card);
+}
+
+[data-theme="admin"] .tc-styleButton.active {
+  background: var(--bg-card);
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
+[data-theme="admin"] .tc-styleButton.active::before {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+[data-theme="admin"] .tc-fabricCard {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: none;
+}
+
+[data-theme="admin"] .tc-fabricCard:hover:not(:disabled) {
+  border-color: var(--border-focus);
+}
+
+[data-theme="admin"] .tc-fabricCard.active {
+  border-color: var(--accent);
+  background: var(--bg-card);
+}
+
+[data-theme="admin"] .tc-fabricSwatch {
+  background: var(--bg-card);
+}
+
+[data-theme="admin"] .tc-fabricLabel {
+  color: var(--text-primary);
+}
+
+[data-theme="admin"] .tc-optionButton {
+  border-color: var(--border);
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+}
+
+[data-theme="admin"] .tc-optionButton:hover:not(:disabled) {
+  border-color: var(--border-focus);
+}
+
+[data-theme="admin"] .tc-optionButton.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+[data-theme="admin"] .tc-viewerCard {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+}
+
+/* -----------------------------------------------------------------------
+   Premium configurator sidebar skin
+   --------------------------------------------------------------------- */
+
+.configurator-sidebar .tc-root {
+  gap: 14px;
+}
+
+.configurator-sidebar .tc-fabricBar,
+.configurator-sidebar .tc-styleBar,
+.configurator-sidebar .tc-optionGroup,
+.configurator-sidebar .cfg-accordionContent .tc-fabricBar,
+.configurator-sidebar .cfg-accordionContent .tc-styleBar,
+.configurator-sidebar .cfg-accordionContent .tc-optionGroup {
+  padding: 14px;
+}
+
+.configurator-sidebar .tc-fabricCards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.configurator-sidebar .tc-fabricCard {
+  border: 1px solid rgba(201, 169, 110, 0.16);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 14px 26px rgba(0, 0, 0, 0.14);
+  color: #f0ece4;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.configurator-sidebar .tc-fabricCard:hover:not(:disabled) {
+  border-color: rgba(201, 169, 110, 0.44);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 0 0 1px rgba(201, 169, 110, 0.08) inset,
+    0 18px 34px rgba(0, 0, 0, 0.2);
+}
+
+.configurator-sidebar .tc-fabricCard.active {
+  border-color: #c9a96e;
+  background:
+    linear-gradient(180deg, rgba(201, 169, 110, 0.18), rgba(201, 169, 110, 0.06)),
+    rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 0 0 1px rgba(201, 169, 110, 0.58) inset,
+    0 0 28px rgba(201, 169, 110, 0.22);
+}
+
+.configurator-sidebar .tc-fabricSwatch {
+  height: 68px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.configurator-sidebar .tc-fabricLabel,
+.configurator-sidebar .tc-styleButton,
+.configurator-sidebar .tc-optionButton {
+  color: #f0ece4;
+}
+
+.configurator-sidebar .tc-fabricLabel {
+  font-size: 0.78rem;
+  font-weight: 760;
+}
+
+.configurator-sidebar .tc-styleButton,
+.configurator-sidebar .tc-optionButton {
+  border-color: rgba(201, 169, 110, 0.16);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.configurator-sidebar .tc-styleButton:hover:not(:disabled),
+.configurator-sidebar .tc-optionButton:hover:not(:disabled) {
+  border-color: rgba(201, 169, 110, 0.42);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.configurator-sidebar .tc-styleButton.active,
+.configurator-sidebar .tc-optionButton.active {
+  border-color: #c9a96e;
+  background: rgba(201, 169, 110, 0.16);
+  color: #f8f0dd;
+  box-shadow: 0 0 20px rgba(201, 169, 110, 0.2);
+}
+
+.configurator-sidebar .tc-styleButton::before {
+  border-color: rgba(201, 169, 110, 0.36);
+}
+
+.configurator-sidebar .tc-styleButton.active::before {
+  background: #c9a96e;
+  border-color: #c9a96e;
+}
+
+.configurator-viewer-panel .tc-viewer-standalone {
+  min-height: 100%;
+}
+
+.configurator-viewer-panel .tc-viewer-standalone .tc-viewer {
+  height: min(82vh, 900px);
+  max-width: min(92%, 680px);
+}
+
+@media (max-width: 1023px) {
+  .configurator-viewer-panel .tc-viewer-standalone .tc-viewer {
+    height: min(48vh, 540px);
+    max-width: min(92vw, 500px);
+  }
+}

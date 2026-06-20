@@ -1,0 +1,471 @@
+{
+    "layers": {
+        "base": [
+            {
+                "file": "base/length_long+cut_slim.png",
+                "zIndex": 31
+            },
+            {
+                "file": "base/tira_slim.png",
+                "zIndex": 39
+            },
+            {
+                "file": "base/interior+espalda_abajo+length_long.png",
+                "zIndex": 46
+            },
+            {
+                "file": "base/interior+espalda_arriba.png",
+                "zIndex": 47
+            },
+            {
+                "file": "base/negra.png",
+                "zIndex": 105
+            },
+            {
+                "file": "base/interior+sleeves.png",
+                "zIndex": 120
+            },
+            {
+                "file": "base/bottom_single_breasted+length_long+hemline_open.png",
+                "zIndex": 130
+            },
+            {
+                "file": "base/bottom_double_breasted+length_long.png",
+                "zIndex": 130
+            }
+        ],
+        "lapels": [
+            {
+                "file": "lapels/neck_single_breasted+buttons_1+lapel_narrow+style_lapel_round.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_single_breasted+buttons_2+lapel_narrow+style_lapel_round.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_2+lapel_narrow+style_lapel_round.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_4+lapel_narrow+style_lapel_round.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_6+lapel_narrow+style_lapel_round.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_single_breasted+buttons_1+lapel_medium+style_lapel_round.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_single_breasted+buttons_1+lapel_wide+style_lapel_round.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_single_breasted+buttons_1+lapel_wide+style_lapel_peak.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_single_breasted+buttons_1+lapel_narrow+style_lapel_peak.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_single_breasted+buttons_1+lapel_medium+style_lapel_peak.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_single_breasted+buttons_1+lapel_narrow+style_lapel_notch.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_single_breasted+buttons_1+lapel_medium+style_lapel_notch.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_single_breasted+buttons_1+lapel_wide+style_lapel_notch.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_single_breasted+buttons_2+lapel_medium+style_lapel_notch.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_single_breasted+buttons_2+lapel_narrow+style_lapel_notch.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_single_breasted+buttons_2+lapel_wide+style_lapel_notch.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_single_breasted+buttons_2+lapel_wide+style_lapel_peak.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_single_breasted+buttons_2+lapel_medium+style_lapel_peak.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_single_breasted+buttons_2+lapel_narrow+style_lapel_peak.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_single_breasted+buttons_2+lapel_medium+style_lapel_round.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_single_breasted+buttons_2+lapel_wide+style_lapel_round.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_2+lapel_wide+style_lapel_round.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_2+lapel_medium+style_lapel_round.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_2+lapel_wide+style_lapel_notch.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_2+lapel_medium+style_lapel_notch.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_2+lapel_narrow+style_lapel_notch.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_2+lapel_narrow+style_lapel_peak.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_2+lapel_medium+style_lapel_peak.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_2+lapel_wide+style_lapel_peak.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_4+lapel_wide+style_lapel_peak.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_4+lapel_medium+style_lapel_peak.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_4+lapel_narrow+style_lapel_peak.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_4+lapel_narrow+style_lapel_notch.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_4+lapel_medium+style_lapel_notch.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_4+lapel_wide+style_lapel_notch.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_4+lapel_medium+style_lapel_round.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_4+lapel_wide+style_lapel_round.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_6+lapel_wide+style_lapel_notch.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_6+lapel_narrow+style_lapel_notch.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_6+lapel_medium+style_lapel_notch.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_6+lapel_medium+style_lapel_peak.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_6+lapel_narrow+style_lapel_peak.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_6+lapel_wide+style_lapel_peak.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_6+lapel_wide+style_lapel_round.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/neck_double_breasted+buttons_6+lapel_medium+style_lapel_round.png",
+                "zIndex": 119
+            },
+            {
+                "file": "lapels/breast_pocket_classic+neck_single_breasted+buttons_1+lapel_wide+style_lapel_round.png",
+                "zIndex": 150
+            },
+            {
+                "file": "lapels/breast_pocket_classic+neck_single_breasted+buttons_1+lapel_wide+style_lapel_peak.png",
+                "zIndex": 150
+            },
+            {
+                "file": "lapels/breast_pocket_classic+neck_single_breasted+buttons_1+lapel_wide+style_lapel_notch.png",
+                "zIndex": 150
+            },
+            {
+                "file": "lapels/breast_pocket_classic+neck_single_breasted+buttons_2+lapel_wide+style_lapel_notch.png",
+                "zIndex": 150
+            },
+            {
+                "file": "lapels/breast_pocket_classic+neck_single_breasted+buttons_2+lapel_wide+style_lapel_peak.png",
+                "zIndex": 150
+            },
+            {
+                "file": "lapels/breast_pocket_classic+neck_single_breasted+buttons_2+lapel_wide+style_lapel_round.png",
+                "zIndex": 150
+            },
+            {
+                "file": "lapels/breast_pocket_classic+neck_double_breasted+buttons_2+lapel_wide+style_lapel_round.png",
+                "zIndex": 150
+            },
+            {
+                "file": "lapels/breast_pocket_classic+neck_double_breasted+buttons_2+lapel_wide+style_lapel_notch.png",
+                "zIndex": 150
+            },
+            {
+                "file": "lapels/breast_pocket_classic+neck_double_breasted+buttons_2+lapel_wide+style_lapel_peak.png",
+                "zIndex": 150
+            },
+            {
+                "file": "lapels/buttons+neck_single_breasted+buttons_1+lapel_narrow+style_lapel_round.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_single_breasted+buttons_2+lapel_narrow+style_lapel_round.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_2+lapel_narrow+style_lapel_round.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_4+lapel_narrow+style_lapel_round.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_6+lapel_narrow+style_lapel_round.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_single_breasted+buttons_1+lapel_medium+style_lapel_round.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_single_breasted+buttons_1+lapel_wide+style_lapel_round.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_single_breasted+buttons_1+lapel_wide+style_lapel_peak.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_single_breasted+buttons_1+lapel_narrow+style_lapel_peak.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_single_breasted+buttons_1+lapel_medium+style_lapel_peak.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_single_breasted+buttons_1+lapel_narrow+style_lapel_notch.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_single_breasted+buttons_1+lapel_medium+style_lapel_notch.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_single_breasted+buttons_1+lapel_wide+style_lapel_notch.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_single_breasted+buttons_2+lapel_medium+style_lapel_notch.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_single_breasted+buttons_2+lapel_narrow+style_lapel_notch.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_single_breasted+buttons_2+lapel_wide+style_lapel_notch.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_single_breasted+buttons_2+lapel_wide+style_lapel_peak.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_single_breasted+buttons_2+lapel_medium+style_lapel_peak.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_single_breasted+buttons_2+lapel_narrow+style_lapel_peak.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_single_breasted+buttons_2+lapel_medium+style_lapel_round.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_single_breasted+buttons_2+lapel_wide+style_lapel_round.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_2+lapel_wide+style_lapel_round.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_2+lapel_medium+style_lapel_round.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_2+lapel_wide+style_lapel_notch.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_2+lapel_medium+style_lapel_notch.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_2+lapel_narrow+style_lapel_notch.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_2+lapel_narrow+style_lapel_peak.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_2+lapel_medium+style_lapel_peak.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_2+lapel_wide+style_lapel_peak.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_4+lapel_wide+style_lapel_peak.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_4+lapel_medium+style_lapel_peak.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_4+lapel_narrow+style_lapel_peak.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_4+lapel_narrow+style_lapel_notch.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_4+lapel_medium+style_lapel_notch.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_4+lapel_wide+style_lapel_notch.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_4+lapel_medium+style_lapel_round.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_4+lapel_wide+style_lapel_round.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_6+lapel_wide+style_lapel_notch.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_6+lapel_narrow+style_lapel_notch.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_6+lapel_medium+style_lapel_notch.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_6+lapel_medium+style_lapel_peak.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_6+lapel_narrow+style_lapel_peak.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_6+lapel_wide+style_lapel_peak.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_6+lapel_wide+style_lapel_round.png",
+                "zIndex": 180
+            },
+            {
+                "file": "lapels/buttons+neck_double_breasted+buttons_6+lapel_medium+style_lapel_round.png",
+                "zIndex": 180
+            }
+        ],
+        "hip-pocket": [
+            {
+                "file": "hip-pocket/front_pocket+diagonal.png",
+                "zIndex": 33
+            },
+            {
+                "file": "hip-pocket/back_pocket+with_button.png",
+                "zIndex": 38
+            },
+            {
+                "file": "hip-pocket/buttons+back_pocket+with_button.png",
+                "zIndex": 39
+            },
+            {
+                "file": "hip-pocket/breast_pocket_classic.png",
+                "zIndex": 150
+            },
+            {
+                "file": "hip-pocket/hip_pockets_double_welt+fit_slim.png",
+                "zIndex": 150
+            },
+            {
+                "file": "hip-pocket/hip_pockets_with_flap+fit_slim.png",
+                "zIndex": 150
+            },
+            {
+                "file": "hip-pocket/hip_pockets_with_flap+fit_slim+third.png",
+                "zIndex": 150
+            },
+            {
+                "file": "hip-pocket/hip_pockets_double_welt+fit_slim+third.png",
+                "zIndex": 150
+            }
+        ],
+        "misc": []
+    }
+}
