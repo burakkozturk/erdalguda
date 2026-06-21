@@ -21,6 +21,7 @@ from pathlib import Path
 
 from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from PIL import Image
 
 import fabric_generator
@@ -41,6 +42,7 @@ SHIRT_ASSETS_ROOT  = PROJECT_ROOT / "public/assets/shirts"
 TUXEDO_ASSETS_ROOT = PROJECT_ROOT / "public/assets/tuxedo"
 VEST_ASSETS_ROOT   = PROJECT_ROOT / "public/assets/vest"
 PANT_ASSETS_ROOT   = PROJECT_ROOT / "public/assets/pant"
+COAT_ASSETS_ROOT   = PROJECT_ROOT / "public/assets/coat"
 
 # Map the incoming `garment_type` form value to the asset root directory
 # and the canonical short name used in URLs / log labels.
@@ -67,6 +69,11 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Serve generated (and base) assets straight off local disk for local dev, so
+# the frontend can load textures without S3. The frontend points
+# VITE_S3_ASSET_BASE_URL at http://localhost:8000/assets to use this.
+app.mount("/assets", StaticFiles(directory=PROJECT_ROOT / "public/assets"), name="assets")
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -160,6 +167,15 @@ def get_pant_config():
     config_path = PANT_ASSETS_ROOT / "pant_config.json"
     if not config_path.exists():
         raise HTTPException(status_code=404, detail="pant_config.json not found.")
+    return _load_json(config_path)
+
+
+@app.get("/api/coats/config")
+def get_coat_config():
+    """Return coat_config.json so the frontend CoatConfigurator can load options."""
+    config_path = COAT_ASSETS_ROOT / "coat_config.json"
+    if not config_path.exists():
+        raise HTTPException(status_code=404, detail="coat_config.json not found.")
     return _load_json(config_path)
 
 
@@ -266,6 +282,30 @@ async def generate_fabric(
                 "fabricId": fabric_id,
                 "label": name.strip(),
                 "swatchSrc": public_url(f"pant/generated-swatches/{fabric_id}.png"),
+            },
+            "generatedLayers": generated_count,
+        }
+
+    # ---- COAT branch ----------------------------------------------------
+    if garment_type == "COAT":
+        print(f"\n[generate] COAT fabric_id={fabric_id!r}")
+        generated_count = fabric_generator.generate_coat_layers(
+            fabric_pil=fabric_pil,
+            fabric_id=fabric_id,
+            coat_root=COAT_ASSETS_ROOT,
+            texture_detail_strength=float(np.clip(texture_detail_strength, 0, 1)),
+            shading_strength=float(np.clip(shading_strength, 0, 1)),
+            render_tile_size=int(np.clip(render_tile_size, 60, 600)),
+        )
+        print(f"[generate] COAT done — {generated_count} layers written")
+        _notify_spring_boot(fabric_id, fabric_key, name.strip(), tag=tag.strip(), garment_type="JACKET")
+        return {
+            "ok": True,
+            "fabric": {
+                "key": fabric_key,
+                "fabricId": fabric_id,
+                "label": name.strip(),
+                "swatchSrc": public_url(f"coat/generated-swatches/{fabric_id}.png"),
             },
             "generatedLayers": generated_count,
         }
@@ -438,6 +478,20 @@ async def generate_fabric(
         except Exception as e:
             print(f"[generate] PANT generation failed: {e}")
 
+    if (COAT_ASSETS_ROOT / "coat_config.json").exists():
+        try:
+            coat_count = fabric_generator.generate_coat_layers(
+                fabric_pil=fabric_pil,
+                fabric_id=fabric_id,
+                coat_root=COAT_ASSETS_ROOT,
+                texture_detail_strength=clipped_detail,
+                shading_strength=clipped_shading,
+                render_tile_size=clipped_tile,
+            )
+            print(f"[generate] COAT done — {coat_count} layers written")
+        except Exception as e:
+            print(f"[generate] COAT generation failed: {e}")
+
     # Spring Boot gets the canonical garment type — backend enum only
     # accepts JACKET / SHIRT today, so map suit → JACKET for now (the
     # platform treats a suit as a jacket-class fabric in its catalog).
@@ -486,5 +540,8 @@ async def delete_fabric(fabric_id: str):
     pant_gen = PANT_ASSETS_ROOT / "generated" / fabric_id
     if pant_gen.exists():
         shutil.rmtree(pant_gen)
-    delete_fabric_assets(["blazer", "suit", "tuxedo", "shirts", "vest", "pant"], fabric_id)
+    coat_gen = COAT_ASSETS_ROOT / "generated" / fabric_id
+    if coat_gen.exists():
+        shutil.rmtree(coat_gen)
+    delete_fabric_assets(["blazer", "suit", "tuxedo", "shirts", "vest", "pant", "coat"], fabric_id)
     return {"deleted": fabric_id}

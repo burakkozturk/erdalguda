@@ -619,6 +619,7 @@ RENDER_PROFILE_SHIRT = {
 }
 RENDER_PROFILE_VEST = dict(RENDER_PROFILE_SHIRT)
 RENDER_PROFILE_PANT = dict(RENDER_PROFILE_SHIRT)
+RENDER_PROFILE_COAT = dict(RENDER_PROFILE_SHIRT)
 
 
 def apply_fabric_to_layer_v2(
@@ -1758,6 +1759,124 @@ def generate_pant_layers(
 
     upload_generated_tree("pant", fabric_id, out_dir)
     upload_swatch("pant", fabric_id, swatch_path)
+    return count
+
+
+# ---------------------------------------------------------------------------
+# Coat generation  (called from main.py when garment_type == "COAT")
+# ---------------------------------------------------------------------------
+
+def generate_coat_layers(
+    fabric_pil: Image.Image,
+    fabric_id: str,
+    coat_root: Path,
+    texture_detail_strength: float = TEXTURE_DETAIL_STRENGTH,
+    shading_strength: float = SHADING_STRENGTH,
+    render_tile_size: int = RENDER_TILE_SIZE,
+) -> int:
+    """
+    Generate fabric-applied coat PNGs.  Same delegation model as
+    generate_vest_layers() / generate_pant_layers().
+
+    The coat config groups layers under base + style + bottoms + pockets +
+    sleeve-accents + shoulder-accents (each group value is {label, layers:[…]}
+    except `base`, which is a flat list).  Every fabric=true layer across all
+    groups is collected (deduplicated by path), the seamless fabric is produced
+    once, then each unique layer is rendered with apply_fabric_to_layer_v2.
+    Coat config paths are already relative to coat_root (no garment prefix), and
+    every fabric-layer basename is unique, so output is written flat under
+    generated/<fabric_id>/<basename> — exactly like vest/pant.
+    """
+    fabric_seamless = _shirt_make_seamless(
+        fabric_pil.convert("RGB"), overlap=SHIRT_SEAMLESS_OVERLAP
+    )
+
+    config_path = coat_root / "coat_config.json"
+    with open(config_path) as fh:
+        cfg = json.load(fh)
+
+    seen: dict[str, dict] = {}
+    for entry in cfg.get("base", []):
+        if entry.get("fabric", False):
+            seen[entry["path"]] = entry
+    for group in ("style", "bottoms", "pockets", "sleeve-accents", "shoulder-accents"):
+        for variant in cfg.get(group, {}).values():
+            for entry in variant.get("layers", []):
+                if entry.get("fabric", False):
+                    seen[entry["path"]] = entry
+
+    profile = RENDER_PROFILE_COAT
+    base_fabric = sorted(
+        [e for e in cfg.get("base", []) if e.get("fabric", False)],
+        key=lambda e: e["z"],
+    )
+    global_mean_lum: float | None = None
+    for ref_entry in base_fabric:
+        ref_path = coat_root / ref_entry["path"]
+        if not ref_path.exists():
+            continue
+        ref_arr = np.array(Image.open(str(ref_path)).convert("RGBA"), dtype=np.float32) / 255.0
+        ref_vis = ref_arr[..., 3] > (profile["alpha_threshold"] / 255.0)
+        if not ref_vis.any():
+            continue
+        ref_rgb = ref_arr[..., :3]
+        ref_lum = (0.2126 * ref_rgb[..., 0]
+                   + 0.7152 * ref_rgb[..., 1]
+                   + 0.0722 * ref_rgb[..., 2])
+        candidate = float(ref_lum[ref_vis].mean()) * 255.0
+        if candidate > 1.0:
+            global_mean_lum = candidate
+            break
+
+    swatch_dir = coat_root / "generated-swatches"
+    swatch_dir.mkdir(parents=True, exist_ok=True)
+    swatch_path = swatch_dir / f"{fabric_id}.png"
+    fabric_pil.resize((120, 120), Image.Resampling.LANCZOS).save(swatch_path)
+
+    out_dir = coat_root / "generated" / fabric_id
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    lum_str = f"{global_mean_lum:.1f}" if global_mean_lum is not None else "auto"
+    print(
+        f"  [coat] tile={profile['tile_size_px']}px"
+        f"  detail_blend={profile['detail_blend']:.2f}"
+        f"  shading={profile['shading_strength']:.2f}"
+        f"  layers={len(seen)}  global_mean_lum={lum_str}"
+    )
+
+    count = 0
+    for entry in seen.values():
+        template_path = coat_root / entry["path"]
+        if not template_path.exists():
+            print(f"  [warn] coat template missing: {template_path}")
+            continue
+
+        zones = None
+        if entry.get("zones"):
+            zones = [
+                {
+                    "polygon": [tuple(pt) for pt in z["polygon"]],
+                    "rotation": z["rotation"],
+                }
+                for z in entry["zones"]
+            ]
+
+        try:
+            apply_fabric_to_layer_v2(
+                template_path,
+                fabric_seamless,
+                out_dir / template_path.name,
+                rotation=entry.get("rotation", 0),
+                zones=zones,
+                global_mean_lum=global_mean_lum,
+                **profile,
+            )
+            count += 1
+        except Exception as exc:
+            print(f"  [error] coat layer {entry['path']}: {exc}")
+
+    upload_generated_tree("coat", fabric_id, out_dir)
+    upload_swatch("coat", fabric_id, swatch_path)
     return count
 
 
