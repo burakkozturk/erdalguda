@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, type ReactElement } from 'react';
 import { getFabrics } from '../api/fabricApi';
 import type { FabricResponse } from '../api/fabricApi';
 import type { TuxedoConfig, TuxedoStyle, LapelStyle, LapelWidth, PocketStyle } from '../types/tuxedo';
@@ -512,22 +512,14 @@ export default function TuxedoConfigurator({
             : TUXEDO_LAYER_TRANSFORM.jacket,
           transformOrigin: '50% 50%',
         };
-        const elements = [
-          <img
-            key={`${layer.key}::template`}
-            src={layer.src}
-            alt=""
-            className="tc-layer"
-            style={baseStyle}
-            draggable={false}
-            onError={() => console.error('Tuxedo katmanı yüklenemedi:', layer.src)}
-          />,
-        ];
+        const elements: ReactElement[] = [];
         if (activeFabricId && layer.fabricDependent) {
-          // Per-fabric overlay produced by fabric_generator.py against the
-          // tuxedo manifest. Renders on top of the bare template at the
-          // same zIndex; onError hides it so a missing variant falls back
-          // to the template silently.
+          // Render ONLY the per-fabric PNG. It already bakes the template's
+          // greyscale shading and preserves the template alpha exactly, so the
+          // bare template beneath is redundant — and because the template is
+          // near-white while the fabric is dark, stacking it leaked a white
+          // fringe through every anti-aliased layer edge (the "white lines").
+          // Fall back to the bare template (once) only if the variant is missing.
           const fabricUrl = generatedLayerUrl(
             'tuxedo',
             activeFabricId,
@@ -543,8 +535,23 @@ export default function TuxedoConfigurator({
               style={baseStyle}
               draggable={false}
               onError={(e) => {
-                (e.currentTarget as HTMLImageElement).style.visibility = 'hidden';
+                const img = e.currentTarget as HTMLImageElement;
+                if (img.dataset.fellBack) return;
+                img.dataset.fellBack = '1';
+                img.src = layer.src;
               }}
+            />,
+          );
+        } else {
+          elements.push(
+            <img
+              key={`${layer.key}::template`}
+              src={layer.src}
+              alt=""
+              className="tc-layer"
+              style={baseStyle}
+              draggable={false}
+              onError={() => console.error('Tuxedo katmanı yüklenemedi:', layer.src)}
             />,
           );
         }

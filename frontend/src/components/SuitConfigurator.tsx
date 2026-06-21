@@ -1098,35 +1098,39 @@ export default function SuitConfigurator({
           : null;
         const elements: ReactElement[] = [];
 
-        elements.push(
-          <img
-            key={`suit::${layer.id}::template`}
-            src={layer.src}
-            alt={layer.id}
-            className="jc-layer"
-            style={baseStyle}
-            draggable={false}
-            onError={() => console.error('Katman yüklenemedi:', layer.src)}
-          />,
-        );
-
         if (fabricUrl) {
-          // The Python renderer bakes the multiply blend against the bare
-          // template directly into this PNG, so the frontend renders it as a
-          // plain <img> — no mix-blend-mode, no filters. The bare template
-          // beneath remains as a defensive fallback for layers whose
-          // per-fabric output is intentionally near-blank (e.g. negra body).
+          // Render ONLY the per-fabric PNG. It already bakes the template's
+          // greyscale shading and preserves the template alpha exactly, so the
+          // bare template beneath is redundant — and because the template is
+          // near-white while the fabric is dark, stacking it leaked a white
+          // fringe through every anti-aliased layer edge (the "white lines").
+          // Fall back to the bare template (once) only if the variant is missing.
           elements.push(
             <img
               key={`suit::${layer.id}::${activeFabricId}`}
               src={fabricUrl}
-              alt=""
+              alt={layer.id}
               className="jc-layer"
               style={baseStyle}
               draggable={false}
               onError={(e) => {
-                (e.currentTarget as HTMLImageElement).style.visibility = 'hidden';
+                const img = e.currentTarget as HTMLImageElement;
+                if (img.dataset.fellBack) return;
+                img.dataset.fellBack = '1';
+                img.src = layer.src;
               }}
+            />,
+          );
+        } else {
+          elements.push(
+            <img
+              key={`suit::${layer.id}::template`}
+              src={layer.src}
+              alt={layer.id}
+              className="jc-layer"
+              style={baseStyle}
+              draggable={false}
+              onError={() => console.error('Katman yüklenemedi:', layer.src)}
             />,
           );
         }
