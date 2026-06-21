@@ -914,22 +914,13 @@ export default function JacketConfigurator({
         const elements: ReactElement[] = [];
 
         if (fabricUrl) {
-          elements.push(
-            <img
-              key={`blazer::${layer.id}::shading`}
-              src={layer.src}
-              alt=""
-              className="jc-layer"
-              style={{ zIndex: layer.zIndex }}
-              draggable={false}
-              onError={() => console.error('Katman yüklenemedi:', layer.src)}
-            />,
-          );
-          // The Python renderer bakes the multiply blend against the bare
-          // template directly into this PNG, so the frontend renders it as a
-          // plain <img> — no mix-blend-mode, no filters. The bare template
-          // beneath remains as a defensive fallback for layers whose
-          // per-fabric output is intentionally near-blank.
+          // Render ONLY the per-fabric PNG. The Python renderer already bakes
+          // the template's greyscale shading into this PNG *and* preserves the
+          // template alpha exactly, so the bare template beneath is redundant.
+          // Worse: the template is near-white while the fabric is dark, so
+          // stacking it leaked a white fringe through every anti-aliased layer
+          // edge — the "white lines" at piece boundaries. If the per-fabric
+          // variant is missing we fall back to the bare template (once).
           elements.push(
             <img
               key={`blazer::${layer.id}::${activeFabricId}`}
@@ -939,7 +930,10 @@ export default function JacketConfigurator({
               style={{ zIndex: layer.zIndex }}
               draggable={false}
               onError={(e) => {
-                (e.currentTarget as HTMLImageElement).style.visibility = 'hidden';
+                const img = e.currentTarget as HTMLImageElement;
+                if (img.dataset.fellBack) return;
+                img.dataset.fellBack = '1';
+                img.src = layer.src;
               }}
             />,
           );
