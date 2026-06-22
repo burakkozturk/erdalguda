@@ -1,0 +1,257 @@
+/* CoatConfigurator — scoped with coat- prefix */
+
+/* -----------------------------------------------------------------------
+   Section wrapper
+   --------------------------------------------------------------------- */
+
+.coat-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.coat-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.coat-section-title {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-brand-blue, #152753);
+}
+
+[data-theme="admin"] .coat-section-title {
+  color: rgba(201, 169, 110, 0.82);
+}
+
+/* -----------------------------------------------------------------------
+   Option grids
+   --------------------------------------------------------------------- */
+
+.coat-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.coat-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+/* -----------------------------------------------------------------------
+   Option card
+   --------------------------------------------------------------------- */
+
+.coat-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 8px 10px;
+  border: 1.5px solid rgba(21, 39, 83, 0.12);
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(251, 248, 241, 0.72) 100%);
+  cursor: pointer;
+  font: inherit;
+  text-align: center;
+  transition:
+    border-color 200ms ease,
+    background 200ms ease,
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.coat-card:hover:not(:disabled) {
+  border-color: rgba(198, 161, 91, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -16px rgba(34, 27, 18, 0.22);
+}
+
+.coat-card.active {
+  border-color: #c9a96e;
+  background:
+    linear-gradient(180deg, rgba(198, 161, 91, 0.10) 0%, rgba(213, 184, 115, 0.06) 100%);
+  box-shadow:
+    0 0 0 1px rgba(198, 161, 91, 0.55) inset,
+    0 18px 32px -18px rgba(155, 117, 51, 0.45);
+  transform: translateY(-1px);
+}
+
+.coat-card:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Checkmark badge on top-left of active card */
+.coat-card-check {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  line-height: 0;
+  pointer-events: none;
+}
+
+/* Price badge on top-right */
+.coat-card-badge {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #9b5c1a;
+  background: rgba(198, 161, 91, 0.18);
+  border: 1px solid rgba(198, 161, 91, 0.4);
+  border-radius: 5px;
+  padding: 2px 5px;
+  line-height: 1.3;
+}
+
+/* SVG icon frame */
+.coat-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  color: #2a2520;
+  flex-shrink: 0;
+}
+
+.coat-card-icon svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Label */
+.coat-card-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+  color: #2a2520;
+}
+
+.coat-card.active .coat-card-label {
+  color: #9b6a1f;
+}
+
+/* -----------------------------------------------------------------------
+   Dark / admin theme
+   --------------------------------------------------------------------- */
+
+[data-theme="admin"] .coat-card {
+  border-color: rgba(201, 169, 110, 0.16);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="admin"] .coat-card:hover:not(:disabled) {
+  border-color: rgba(201, 169, 110, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 0 0 1px rgba(201, 169, 110, 0.08) inset,
+    0 18px 32px -18px rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="admin"] .coat-card.active {
+  border-color: var(--accent);
+  background:
+    linear-gradient(180deg, rgba(201, 169, 110, 0.2) 0%, rgba(212, 184, 122, 0.07) 100%),
+    rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 0 0 1px rgba(201, 169, 110, 0.62) inset,
+    0 0 26px rgba(201, 169, 110, 0.24);
+}
+
+[data-theme="admin"] .coat-card-icon {
+  color: rgba(240, 236, 228, 0.85);
+}
+
+[data-theme="admin"] .coat-card-label {
+  color: rgba(240, 236, 228, 0.85);
+}
+
+[data-theme="admin"] .coat-card.active .coat-card-label {
+  color: #c9a96e;
+}
+
+[data-theme="admin"] .coat-card-badge {
+  color: #c9a96e;
+  background: rgba(201, 169, 110, 0.15);
+  border-color: rgba(201, 169, 110, 0.35);
+}
+
+/* -----------------------------------------------------------------------
+   VIP / sidebar context
+   --------------------------------------------------------------------- */
+
+.configurator-sidebar .coat-section-title {
+  color: rgba(201, 169, 110, 0.82);
+}
+
+.configurator-sidebar .coat-card {
+  border-color: rgba(201, 169, 110, 0.16);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.configurator-sidebar .coat-card:hover:not(:disabled) {
+  border-color: rgba(201, 169, 110, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.configurator-sidebar .coat-card.active {
+  border-color: #c9a96e;
+  background:
+    linear-gradient(180deg, rgba(201, 169, 110, 0.2) 0%, rgba(212, 184, 122, 0.07) 100%),
+    rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 0 0 1px rgba(201, 169, 110, 0.62) inset,
+    0 0 26px rgba(201, 169, 110, 0.24);
+}
+
+.configurator-sidebar .coat-card-icon,
+.configurator-sidebar .coat-card-label {
+  color: rgba(240, 236, 228, 0.85);
+}
+
+.configurator-sidebar .coat-card.active .coat-card-label {
+  color: #c9a96e;
+}
+
+.configurator-sidebar .coat-card-badge {
+  color: #c9a96e;
+  background: rgba(201, 169, 110, 0.15);
+  border-color: rgba(201, 169, 110, 0.35);
+}
+
+/* -----------------------------------------------------------------------
+   Responsive
+   --------------------------------------------------------------------- */
+
+@media (max-width: 480px) {
+  .coat-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .coat-card-icon {
+    width: 44px;
+    height: 44px;
+  }
+}

@@ -2,6 +2,7 @@ import type { ProductType } from './production';
 import type { JacketConfig } from './jacket';
 import type { VestConfig } from './vest';
 import type { PantConfig } from './pant';
+import type { CoatConfig } from './coat';
 
 export type OrderStatus = 'DRAFT' | 'ACTIVE' | 'READY' | 'DELIVERED' | 'CANCELLED';
 export type OrderPaymentStatus = 'UNPAID' | 'PAID';
@@ -69,6 +70,16 @@ export type Order = {
   pantFit?: string | null;
   pantLegStyle?: string | null;
   pantDrape?: string | null;
+  coatConfig?: CoatConfig | null;
+  coatStyle?: string | null;
+  coatCollarStyle?: string | null;
+  coatLapelStyle?: string | null;
+  coatLapelLength?: string | null;
+  coatLapelWidth?: string | null;
+  coatFastening?: string | null;
+  coatPocketStyle?: string | null;
+  coatFabricKey?: string | null;
+  coatFabricLabel?: string | null;
 };
 
 export type OrderRequest = {
@@ -115,6 +126,16 @@ export type OrderRequest = {
   pantFit?: string;
   pantLegStyle?: string;
   pantDrape?: string;
+  coatConfig?: CoatConfig | null;
+  coatStyle?: string;
+  coatCollarStyle?: string;
+  coatLapelStyle?: string;
+  coatLapelLength?: string;
+  coatLapelWidth?: string;
+  coatFastening?: string;
+  coatPocketStyle?: string;
+  coatFabricKey?: string;
+  coatFabricLabel?: string;
 };
 
 export function getOrderStatusLabel(status: OrderStatus) {

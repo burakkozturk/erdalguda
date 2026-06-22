@@ -65,6 +65,7 @@ interface ViewerLayer {
   key: string;
   z: number;
   src: string;
+  fallbackSrc?: string;
 }
 
 // ---------------------------------------------------------------------------
@@ -105,17 +106,18 @@ function buildLayers(
   const result: ViewerLayer[] = [];
   for (const layer of filteredLayers) {
     const filename = layer.path.split('/').pop() ?? '';
+    const relativePath = layer.path.replace(/^vest\//, '');
+    const templateSrc = `/assets/vest/${relativePath}`;
     if (layer.fabric) {
       if (!fabricKey) continue;
       result.push({
         key: layer.path,
         z: layer.z,
         src: generatedLayerUrl('vest', fabricDir, filename, FABRIC_ASSET_VERSION),
+        fallbackSrc: templateSrc,
       });
     } else {
-      // Static: /assets/vest/{path-without-leading-"vest/"}
-      const relativePath = layer.path.replace(/^vest\//, '');
-      result.push({ key: layer.path, z: layer.z, src: `/assets/vest/${relativePath}` });
+      result.push({ key: layer.path, z: layer.z, src: templateSrc });
     }
   }
 
@@ -154,13 +156,13 @@ export default function VestConfigurator({
   const initialValueRef = useRef(value);
 
   useEffect(() => {
-    fetch('/api/vests/config')
+    fetch('/assets/vest/vest_config.json')
       .then((r) => {
         if (!r.ok) throw new Error('vest_config yüklenemedi');
         return r.json() as Promise<VestConfigJson>;
       })
       .then(setVestConfig)
-      .catch(console.error);
+      .catch(() => {});
   }, []);
 
   useEffect(() => {
@@ -176,7 +178,7 @@ export default function VestConfigurator({
           });
         }
       })
-      .catch(console.error);
+      .catch(() => {});
   }, []);
 
   const layers = useMemo<ViewerLayer[]>(() => {
@@ -296,7 +298,15 @@ export default function VestConfigurator({
           className="jc-layer"
           style={{ zIndex: layer.z }}
           draggable={false}
-          onError={() => console.error('Yelek katmanı yüklenemedi:', layer.src)}
+          onError={(e) => {
+            const img = e.currentTarget as HTMLImageElement;
+            if (layer.fallbackSrc && !img.dataset.fellBack) {
+              img.dataset.fellBack = '1';
+              img.src = layer.fallbackSrc;
+            } else {
+              img.style.display = 'none';
+            }
+          }}
         />
       ))}
       <PremiumViewerLoader active={viewerLoading} />

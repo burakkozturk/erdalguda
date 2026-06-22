@@ -167,6 +167,44 @@ public class Order {
     @Column(nullable = true, length = 20)
     private String pantDrape;
 
+    // -------------------------------------------------------------------------
+    // Palto (Overcoat) configurator fields
+    // -------------------------------------------------------------------------
+
+    /** Palto göğüs stili: simple (tek sıra) / crossed (çift sıra). */
+    @Column(nullable = true, length = 20)
+    private String coatStyle;
+
+    /** Palto yaka tipi: flap / classic / standup. */
+    @Column(nullable = true, length = 20)
+    private String coatCollarStyle;
+
+    /** Palto yaka şekli: notch / peak / rounded / ulster. */
+    @Column(nullable = true, length = 20)
+    private String coatLapelStyle;
+
+    /** Palto boyu: classic / long. */
+    @Column(nullable = true, length = 20)
+    private String coatLapelLength;
+
+    /** Palto yaka genişliği: standard / wide. */
+    @Column(nullable = true, length = 20)
+    private String coatLapelWidth;
+
+    /** Palto kapama: boton_standard / boton_hide / trench. */
+    @Column(nullable = true, length = 30)
+    private String coatFastening;
+
+    /** Palto cep stili: flap / double_welt / diagonal / patched. */
+    @Column(nullable = true, length = 20)
+    private String coatPocketStyle;
+
+    @Column(nullable = true)
+    private String coatFabricKey;
+
+    @Column(nullable = true)
+    private String coatFabricLabel;
+
     @Column(nullable = false)
     private LocalDateTime createdAt;
 

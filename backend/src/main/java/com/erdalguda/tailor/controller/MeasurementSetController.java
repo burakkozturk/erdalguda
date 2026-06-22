@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@PreAuthorize("hasAnyRole('ADMIN','SALES')")
 public class MeasurementSetController {
 
     private final MeasurementSetService measurementSetService;
@@ -28,37 +27,44 @@ public class MeasurementSetController {
     }
 
     @GetMapping("/api/measurement-definitions")
+    @PreAuthorize("isAuthenticated()")
     public List<MeasurementDefinitionResponse> listMeasurementDefinitions() {
         return measurementSetService.listMeasurementDefinitions();
     }
 
     @GetMapping("/api/measurement-sets")
+    @PreAuthorize("hasAnyRole('ADMIN','SALES')")
     public List<MeasurementSetResponse> listMeasurementSets() {
         return measurementSetService.listMeasurementSets();
     }
 
     @GetMapping("/api/measurement-sets/{id}")
+    @PreAuthorize("isAuthenticated()")
     public MeasurementSetResponse getMeasurementSet(@PathVariable Long id) {
         return measurementSetService.getMeasurementSetById(id);
     }
 
     @GetMapping("/api/customers/{customerId}/measurement-sets")
+    @PreAuthorize("isAuthenticated()")
     public List<MeasurementSetResponse> listCustomerMeasurementSets(@PathVariable Long customerId) {
         return measurementSetService.listMeasurementSetsByCustomer(customerId);
     }
 
     @PostMapping("/api/measurement-sets")
+    @PreAuthorize("hasAnyRole('ADMIN','SALES')")
     public ResponseEntity<MeasurementSetResponse> createMeasurementSet(@Valid @RequestBody MeasurementSetRequest request) {
         MeasurementSetResponse response = measurementSetService.createMeasurementSet(request);
         return ResponseEntity.created(URI.create("/api/measurement-sets/" + response.getId())).body(response);
     }
 
     @PutMapping("/api/measurement-sets/{id}")
+    @PreAuthorize("hasAnyRole('ADMIN','SALES')")
     public MeasurementSetResponse updateMeasurementSet(@PathVariable Long id, @Valid @RequestBody MeasurementSetRequest request) {
         return measurementSetService.updateMeasurementSet(id, request);
     }
 
     @DeleteMapping("/api/measurement-sets/{id}")
+    @PreAuthorize("hasAnyRole('ADMIN','SALES')")
     public ResponseEntity<Void> deleteMeasurementSet(@PathVariable Long id) {
         measurementSetService.deleteMeasurementSet(id);
         return ResponseEntity.noContent().build();

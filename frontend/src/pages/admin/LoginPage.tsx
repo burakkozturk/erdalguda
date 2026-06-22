@@ -94,13 +94,6 @@ export function LoginPage() {
           </button>
         </form>
 
-        <div className="credential-hint">
-          <strong>Geliştirme hesapları</strong>
-          <span>Yönetici: erdal.guda / erdalguda123</span>
-          <span>Satış / Ölçü: ufuk.bas / erdalguda123</span>
-          <span>Makinacı: kemal.erbas / erdalguda123</span>
-        </div>
-
         <Link className="website-link-login" to="/">
           Web sitesine dön
         </Link>

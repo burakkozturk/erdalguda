@@ -110,6 +110,15 @@ public class VipPortalController {
         orderRequest.setPantFit(request.getPantFit());
         orderRequest.setPantLegStyle(request.getPantLegStyle());
         orderRequest.setPantDrape(request.getPantDrape());
+        orderRequest.setCoatStyle(request.getCoatStyle());
+        orderRequest.setCoatCollarStyle(request.getCoatCollarStyle());
+        orderRequest.setCoatLapelStyle(request.getCoatLapelStyle());
+        orderRequest.setCoatLapelLength(request.getCoatLapelLength());
+        orderRequest.setCoatLapelWidth(request.getCoatLapelWidth());
+        orderRequest.setCoatFastening(request.getCoatFastening());
+        orderRequest.setCoatPocketStyle(request.getCoatPocketStyle());
+        orderRequest.setCoatFabricKey(request.getCoatFabricKey());
+        orderRequest.setCoatFabricLabel(request.getCoatFabricLabel());
 
         OrderResponse response = orderService.createOrder(orderRequest);
         return ResponseEntity.created(URI.create("/api/vip/orders/" + response.getId())).body(response);

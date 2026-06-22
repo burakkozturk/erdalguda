@@ -145,6 +145,45 @@ export function getPocketLabel(value: string | null | undefined) {
   return POCKET_STYLE_LABELS[value] ?? value;
 }
 
+export const COAT_STYLE_LABELS: Record<string, string> = {
+  overcoat: 'Overcoat',
+  double_breasted: 'Double Breasted',
+  funnel_neck: 'Funnel Neck',
+  pea_coat: 'Pea Coat',
+  duffle_coat: 'Duffle Coat',
+};
+
+export const COAT_LAPEL_STYLE_LABELS: Record<string, string> = {
+  notch: 'Notch',
+  peak: 'Peak',
+  rounded: 'Rounded',
+  ulster: 'Ulster',
+};
+
+export const COAT_LAPEL_WIDTH_LABELS: Record<string, string> = {
+  standard: 'Standard',
+  wide: 'Wide',
+};
+
+export const COAT_LAPEL_LENGTH_LABELS: Record<string, string> = {
+  classic: 'Classic',
+  long: 'Long',
+};
+
+export const COAT_FASTENING_LABELS: Record<string, string> = {
+  boton_standard: 'Standard',
+  boton_hide: 'Hidden',
+};
+
+export const COAT_POCKET_LABELS: Record<string, string> = {
+  flap: 'Flap',
+  flap_3: 'Flap + Breast',
+  double_welt: 'Double Welt',
+  double_welt_3: 'Welt + Breast',
+  diagonal: 'Diagonal',
+  patched: 'Patch',
+};
+
 export function getJacketStyleLabel(styleKey: string | null | undefined) {
   if (!styleKey) {
     return '-';

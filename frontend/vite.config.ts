@@ -84,16 +84,8 @@ export default defineConfig({
         target: 'http://localhost:8000',
         changeOrigin: true,
       },
-      '/api/shirts': {
-        target: 'http://localhost:8000',
-        changeOrigin: true,
-      },
-      '/api/vests': {
-        target: 'http://localhost:8000',
-        changeOrigin: true,
-      },
-      '/api/pants': {
-        target: 'http://localhost:8000',
+      '/api': {
+        target: 'http://localhost:8080',
         changeOrigin: true,
       },
     },

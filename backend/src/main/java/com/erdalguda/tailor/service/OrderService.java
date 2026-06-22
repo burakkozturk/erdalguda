@@ -156,6 +156,17 @@ public class OrderService {
         if (request.getPantLegStyle() != null) order.setPantLegStyle(request.getPantLegStyle());
         if (request.getPantDrape()    != null) order.setPantDrape(request.getPantDrape());
 
+        // Palto (Overcoat) fields
+        if (request.getCoatStyle()       != null) order.setCoatStyle(request.getCoatStyle());
+        if (request.getCoatCollarStyle() != null) order.setCoatCollarStyle(request.getCoatCollarStyle());
+        if (request.getCoatLapelStyle()  != null) order.setCoatLapelStyle(request.getCoatLapelStyle());
+        if (request.getCoatLapelLength() != null) order.setCoatLapelLength(request.getCoatLapelLength());
+        if (request.getCoatLapelWidth()  != null) order.setCoatLapelWidth(request.getCoatLapelWidth());
+        if (request.getCoatFastening()   != null) order.setCoatFastening(request.getCoatFastening());
+        if (request.getCoatPocketStyle() != null) order.setCoatPocketStyle(request.getCoatPocketStyle());
+        if (request.getCoatFabricKey()   != null) order.setCoatFabricKey(request.getCoatFabricKey());
+        if (request.getCoatFabricLabel() != null) order.setCoatFabricLabel(request.getCoatFabricLabel());
+
         order.recalculateRemainingAmount();
     }
 
@@ -295,6 +306,15 @@ public class OrderService {
             .pantFit(order.getPantFit())
             .pantLegStyle(order.getPantLegStyle())
             .pantDrape(order.getPantDrape())
+            .coatStyle(order.getCoatStyle())
+            .coatCollarStyle(order.getCoatCollarStyle())
+            .coatLapelStyle(order.getCoatLapelStyle())
+            .coatLapelLength(order.getCoatLapelLength())
+            .coatLapelWidth(order.getCoatLapelWidth())
+            .coatFastening(order.getCoatFastening())
+            .coatPocketStyle(order.getCoatPocketStyle())
+            .coatFabricKey(order.getCoatFabricKey())
+            .coatFabricLabel(order.getCoatFabricLabel())
             .build();
     }
 }

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type ReactElement } from 'react';
-import { getFabrics } from '../api/fabricApi';
+import { generateFabric, getFabrics } from '../api/fabricApi';
 import type { FabricResponse } from '../api/fabricApi';
 import type { JacketConfig, JacketFit, JacketVent } from '../types/jacket';
 import { ConfiguratorAccordion } from './ConfiguratorAccordion';
@@ -73,12 +73,6 @@ interface BlazerManifest {
 }
 
 type Fabric = FabricResponse;
-
-interface GenerateResponse {
-  ok: boolean;
-  fabric?: { key: string };
-  detail?: string;
-}
 
 // ---------------------------------------------------------------------------
 // Selection state — what the user is configuring.
@@ -481,18 +475,8 @@ function UploadPanel({ onGenerated }: UploadPanelProps) {
     setStatus('loading');
     setError('');
     try {
-      const body = new FormData();
-      body.append('name', name.trim());
-      body.append('file', file);
-      const res = await fetch('http://localhost:8080/api/fabrics/generate', { 
-        method: 'POST', 
-        headers: {
-          'Authorization': `Bearer ${localStorage.getItem('erdal_guda_auth_token')}`
-        },
-        body 
-      });
-      const data = (await res.json()) as GenerateResponse;
-      if (!res.ok) throw new Error(data.detail ?? 'Generation failed');
+      const data = await generateFabric({ name: name.trim(), file, garmentType: 'JACKET' });
+      if (!data.ok) throw new Error(data.detail ?? 'Generation failed');
       setStatus('success');
       if (data.fabric) await onGenerated(data.fabric.key);
     } catch (err) {

@@ -8,8 +8,13 @@ import com.erdalguda.tailor.exception.ResourceNotFoundException;
 import com.erdalguda.tailor.repository.FabricRepository;
 import java.util.List;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.client.RestClientResponseException;
 import org.springframework.web.client.RestTemplate;
 
 @Service
@@ -63,6 +68,26 @@ public class FabricService {
         fabric.setTag(request.getTag());
         fabric.setInStock(request.isInStock());
         return toResponse(fabricRepository.save(fabric));
+    }
+
+    public ResponseEntity<String> generate(byte[] multipartBody, String contentType) {
+        if (contentType == null || contentType.isBlank()) {
+            return ResponseEntity.badRequest().body("{\"detail\":\"Content-Type header is required.\"}");
+        }
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.parseMediaType(contentType));
+
+        HttpEntity<byte[]> entity = new HttpEntity<>(multipartBody, headers);
+        try {
+            return restTemplate.postForEntity(PYTHON_BASE + "/api/fabrics/generate", entity, String.class);
+        } catch (RestClientResponseException e) {
+            HttpHeaders responseHeaders = new HttpHeaders();
+            responseHeaders.setContentType(MediaType.APPLICATION_JSON);
+            return ResponseEntity.status(e.getStatusCode())
+                .headers(responseHeaders)
+                .body(e.getResponseBodyAsString());
+        }
     }
 
     @Transactional

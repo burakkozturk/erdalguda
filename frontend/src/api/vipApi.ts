@@ -46,6 +46,15 @@ export type VipOrderRequest = {
   pantFit?: string;
   pantLegStyle?: string;
   pantDrape?: string;
+  coatStyle?: string;
+  coatCollarStyle?: string;
+  coatLapelStyle?: string;
+  coatLapelLength?: string;
+  coatLapelWidth?: string;
+  coatFastening?: string;
+  coatPocketStyle?: string;
+  coatFabricKey?: string;
+  coatFabricLabel?: string;
 };
 
 export function getVipMe(): Promise<VipCustomerProfile> {

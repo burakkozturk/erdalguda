@@ -6,7 +6,8 @@ public enum ProductType {
     TROUSERS("Pantolon"),
     VEST("Yelek"),
     SUIT("Takım Elbise"),
-    SMOKIN("Smokin");
+    SMOKIN("Smokin"),
+    PALTO("Palto");
 
     private final String displayName;
 

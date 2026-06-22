@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/orders")
-@PreAuthorize("hasAnyRole('ADMIN','SALES')")
 public class OrderController {
 
     private final OrderService orderService;
@@ -32,33 +31,39 @@ public class OrderController {
     }
 
     @GetMapping
+    @PreAuthorize("hasAnyRole('ADMIN','SALES')")
     public List<OrderResponse> listOrders() {
         return orderService.listAllOrders();
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("isAuthenticated()")
     public OrderResponse getOrder(@PathVariable Long id) {
         return orderService.getOrderById(id);
     }
 
     @PostMapping
+    @PreAuthorize("hasAnyRole('ADMIN','SALES')")
     public ResponseEntity<OrderResponse> createOrder(@Valid @RequestBody OrderRequest request) {
         OrderResponse response = orderService.createOrder(request);
         return ResponseEntity.created(URI.create("/api/orders/" + response.getId())).body(response);
     }
 
     @PutMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ADMIN','SALES')")
     public OrderResponse updateOrder(@PathVariable Long id, @Valid @RequestBody OrderRequest request) {
         return orderService.updateOrder(id, request);
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ADMIN','SALES')")
     public ResponseEntity<Void> deleteOrder(@PathVariable Long id) {
         orderService.deleteOrder(id);
         return ResponseEntity.noContent().build();
     }
 
     @PostMapping("/{id}/trigger-render")
+    @PreAuthorize("isAuthenticated()")
     public ResponseEntity<Void> triggerRender(@PathVariable Long id) {
         orderService.getOrderById(id);
         fabricService.warmUpPython();

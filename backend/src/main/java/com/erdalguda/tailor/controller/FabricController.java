@@ -4,8 +4,11 @@ import com.erdalguda.tailor.dto.FabricRequest;
 import com.erdalguda.tailor.dto.FabricResponse;
 import com.erdalguda.tailor.entity.GarmentType;
 import com.erdalguda.tailor.service.FabricService;
+import java.io.IOException;
 import java.net.URI;
 import java.util.List;
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -44,6 +47,12 @@ public class FabricController {
     public ResponseEntity<FabricResponse> createFabric(@RequestBody FabricRequest request) {
         FabricResponse response = fabricService.create(request);
         return ResponseEntity.created(URI.create("/api/fabrics/" + response.getFabricId())).body(response);
+    }
+
+    @PostMapping("/generate")
+    public ResponseEntity<String> generateFabric(HttpServletRequest request) throws IOException {
+        String contentType = request.getHeader(HttpHeaders.CONTENT_TYPE);
+        return fabricService.generate(request.getInputStream().readAllBytes(), contentType);
     }
 
     @PutMapping("/{fabricId}")

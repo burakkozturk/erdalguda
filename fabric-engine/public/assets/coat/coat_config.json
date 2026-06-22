@@ -29,11 +29,6 @@
       "fabric": false
     },
     {
-      "path": "base/base/coat__z120__chest_piece_with.png",
-      "z": 120,
-      "fabric": false
-    },
-    {
       "path": "base/base/coat__z95__interior+arriba+style_simple+collar_classic.png",
       "z": 95,
       "fabric": true,

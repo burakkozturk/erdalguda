@@ -1,5 +1,6 @@
-// .env riskini ortadan kaldırıp direkt production adresine sabitliyoruz
-const API_BASE_URL = 'http://localhost:8080/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
+  ? `${import.meta.env.VITE_API_BASE_URL}/api`
+  : '/api';
 export const AUTH_TOKEN_STORAGE_KEY = 'erdal_guda_auth_token';
 
 type RequestOptions = Omit<RequestInit, 'body'> & {

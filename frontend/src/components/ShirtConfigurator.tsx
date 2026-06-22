@@ -64,6 +64,7 @@ interface ViewerLayer {
   z: number;
   src: string;
   isShadow?: boolean;
+  fallbackSrc?: string;
 }
 
 // ---------------------------------------------------------------------------
@@ -98,6 +99,8 @@ function buildLayers(
     // disappear on any background, while the dark studio shadow survives
     // on light backgrounds.
     const isShadow = filename.includes('sombra');
+    const relativePath = layer.path.replace(/^shirts\//, '');
+    const templateSrc = `/assets/shirts/${relativePath}`;
     if (layer.fabric) {
       if (!fabricKey) continue;
       result.push({
@@ -105,16 +108,10 @@ function buildLayers(
         z: layer.z,
         src: generatedLayerUrl('shirts', fabricDir, filename, FABRIC_ASSET_VERSION),
         isShadow,
+        fallbackSrc: templateSrc,
       });
     } else {
-      // Strip leading "shirts/" from path to get the subfolder-relative path.
-      const relativePath = layer.path.replace(/^shirts\//, '');
-      result.push({
-        key: layer.path,
-        z: layer.z,
-        src: `/assets/shirts/${relativePath}`,
-        isShadow,
-      });
+      result.push({ key: layer.path, z: layer.z, src: templateSrc, isShadow });
     }
   }
 
@@ -155,13 +152,13 @@ export default function ShirtConfigurator({
   const initialValueRef = useRef(value);
 
   useEffect(() => {
-    fetch('/api/shirts/config')
+    fetch('/assets/shirts/shirt_config.json')
       .then((r) => {
         if (!r.ok) throw new Error('shirt_config yüklenemedi');
         return r.json() as Promise<ShirtConfigJson>;
       })
       .then(setShirtConfig)
-      .catch(console.error);
+      .catch(() => {});
   }, []);
 
   useEffect(() => {
@@ -177,7 +174,7 @@ export default function ShirtConfigurator({
           });
         }
       })
-      .catch(console.error);
+      .catch(() => {});
   }, []);
 
   const layers = useMemo(() => {
@@ -343,7 +340,15 @@ export default function ShirtConfigurator({
             mixBlendMode: layer.isShadow ? 'multiply' : undefined,
           }}
           draggable={false}
-          onError={() => console.error('Gömlek katmanı yüklenemedi:', layer.src)}
+          onError={(e) => {
+            const img = e.currentTarget as HTMLImageElement;
+            if (layer.fallbackSrc && !img.dataset.fellBack) {
+              img.dataset.fellBack = '1';
+              img.src = layer.fallbackSrc;
+            } else {
+              img.style.display = 'none';
+            }
+          }}
         />
       ))}
       <PremiumViewerLoader active={viewerLoading} />

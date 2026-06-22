@@ -4,16 +4,11 @@ import {
   type FabricUpdateRequest,
   type GarmentType,
   deleteFabric,
+  generateFabric,
   getFabrics,
   updateFabric,
 } from '../api/fabricApi';
 import { PrintLabelModal } from '../components/PrintLabelModal';
-
-interface GenerateResponse {
-  ok: boolean;
-  fabric?: { key: string; fabricId: string };
-  detail?: string;
-}
 
 // ---------------------------------------------------------------------------
 // Upload form
@@ -50,21 +45,13 @@ function UploadForm({ garmentType, onSuccess }: UploadFormProps) {
     setUploadError('');
 
     try {
-      const body = new FormData();
-      body.append('name', uploadName.trim());
-      body.append('file', uploadFile);
-      body.append('tag', uploadTag.trim());
-      body.append('garment_type', garmentType);
-
-      const res = await fetch('/api/fabrics/generate', {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem('erdal_guda_auth_token') ?? ''}`,
-        },
-        body,
+      const data = await generateFabric({
+        name: uploadName.trim(),
+        file: uploadFile,
+        tag: uploadTag.trim(),
+        garmentType,
       });
-      const data = (await res.json()) as GenerateResponse;
-      if (!res.ok) throw new Error(data.detail ?? 'Oluşturma başarısız');
+      if (!data.ok) throw new Error(data.detail ?? 'Oluşturma başarısız');
 
       setUploadStatus('success');
       setUploadName('');

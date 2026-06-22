@@ -74,4 +74,15 @@ public class OrderRequest {
     private String pantFit;
     private String pantLegStyle;
     private String pantDrape;
+
+    // Palto (Overcoat) fields
+    private String coatStyle;
+    private String coatCollarStyle;
+    private String coatLapelStyle;
+    private String coatLapelLength;
+    private String coatLapelWidth;
+    private String coatFastening;
+    private String coatPocketStyle;
+    private String coatFabricKey;
+    private String coatFabricLabel;
 }

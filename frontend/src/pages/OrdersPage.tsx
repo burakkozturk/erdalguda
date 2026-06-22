@@ -8,6 +8,7 @@ import ShirtConfigurator from '../components/ShirtConfigurator';
 import TuxedoConfigurator from '../components/TuxedoConfigurator';
 import VestConfigurator from '../components/VestConfigurator';
 import PantConfigurator from '../components/PantConfigurator';
+import CoatConfigurator from '../components/CoatConfigurator';
 import type { Customer } from '../types/customer';
 import type { JacketConfig } from '../types/jacket';
 import type { ShirtConfig } from '../types/shirt';
@@ -16,6 +17,8 @@ import type { VestConfig, VestLapelShape, VestLapelWidth, VestStylePrefix } from
 import { DEFAULT_VEST_CONFIG, vestLapelKey } from '../types/vest';
 import type { PantConfig, PantFasteningStyle, PantPleatStyle } from '../types/pant';
 import { DEFAULT_PANT_CONFIG } from '../types/pant';
+import type { CoatConfig, CoatLapelStyle } from '../types/coat';
+import { DEFAULT_COAT_CONFIG, COAT_STYLE_PARAMS, inferCoatStyle } from '../types/coat';
 import type { CurrencyType, Order, OrderPaymentStatus, OrderRequest } from '../types/order';
 import type { ProductType } from '../types/production';
 import { getCurrencyLabel, getPaymentStatusLabel } from '../types/order';
@@ -24,6 +27,8 @@ import {
   getConfiguratorLabel,
   getJacketStyleLabel,
   getPocketLabel,
+  COAT_LAPEL_STYLE_LABELS,
+  COAT_STYLE_LABELS,
   JACKET_FIT_LABELS,
   JACKET_LAPEL_WIDTH_LABELS,
   JACKET_VENT_LABELS,
@@ -48,7 +53,7 @@ import {
 
 // Smokin (TUXEDO/SMOKIN) is intentionally excluded from the admin order
 // creation menu; it remains visible to public visitors only.
-const productTypes: ProductType[] = ['SHIRT', 'JACKET', 'TROUSERS', 'VEST', 'SUIT'];
+const productTypes: ProductType[] = ['SHIRT', 'JACKET', 'TROUSERS', 'VEST', 'SUIT', 'PALTO'];
 const currencies: CurrencyType[] = ['TRY', 'USD', 'EUR'];
 const paymentStatuses: OrderPaymentStatus[] = ['UNPAID', 'PAID'];
 
@@ -102,6 +107,7 @@ type FormState = {
   tuxedoConfig: TuxedoConfig | null;
   vestConfig: VestConfig | null;
   pantConfig: PantConfig | null;
+  coatConfig: CoatConfig | null;
 };
 
 const emptyForm: FormState = {
@@ -117,6 +123,7 @@ const emptyForm: FormState = {
   tuxedoConfig: null,
   vestConfig: DEFAULT_VEST_CONFIG,
   pantConfig: DEFAULT_PANT_CONFIG,
+  coatConfig: DEFAULT_COAT_CONFIG,
 };
 
 // ---------------------------------------------------------------------------
@@ -220,6 +227,15 @@ function getConfiguratorSummaryItems(form: FormState): Array<{ label: string; va
     ];
   }
 
+  if (form.productType === 'PALTO' && form.coatConfig) {
+    const config = form.coatConfig;
+    const hasLapel = COAT_STYLE_PARAMS[config.style].hasLapel;
+    return [
+      { label: 'Stil', value: getConfiguratorLabel(COAT_STYLE_LABELS, config.style) },
+      ...(hasLapel ? [{ label: 'Yaka', value: getConfiguratorLabel(COAT_LAPEL_STYLE_LABELS, config.lapelStyle) }] : []),
+    ];
+  }
+
   return [];
 }
 
@@ -289,6 +305,14 @@ function toForm(order: Order): FormState {
         fabricLabel: order.pantFabricLabel ?? order.jacketFabricLabel ?? DEFAULT_PANT_CONFIG.fabricLabel,
       }
     : null;
+  const coatConfig: CoatConfig | null = order.coatFabricKey
+    ? {
+        style: inferCoatStyle(order.coatStyle, order.coatCollarStyle, order.coatLapelLength),
+        lapelStyle: (order.coatLapelStyle as CoatLapelStyle) ?? 'peak',
+        fabricKey: order.coatFabricKey ?? '',
+        fabricLabel: order.coatFabricLabel ?? '',
+      }
+    : null;
   return {
     customerId: String(order.customerId),
     productType: order.productType,
@@ -302,6 +326,7 @@ function toForm(order: Order): FormState {
     tuxedoConfig,
     vestConfig,
     pantConfig,
+    coatConfig,
   };
 }
 
@@ -368,6 +393,19 @@ function toPayload(form: FormState): OrderRequest {
     if (pc.fit)      payload.pantFit      = pc.fit;
     if (pc.legStyle) payload.pantLegStyle = pc.legStyle;
     if (pc.drape)    payload.pantDrape    = pc.drape;
+  }
+  if (form.productType === 'PALTO' && form.coatConfig) {
+    const cc = form.coatConfig;
+    const params = COAT_STYLE_PARAMS[cc.style];
+    payload.coatStyle       = params.internalStyle;
+    payload.coatCollarStyle = params.collarStyle;
+    payload.coatLapelStyle  = cc.lapelStyle;
+    payload.coatLapelLength = params.lapelLength;
+    payload.coatLapelWidth  = params.lapelWidth;
+    payload.coatFastening   = params.fastening;
+    payload.coatPocketStyle = params.pocketStyle;
+    payload.coatFabricKey   = cc.fabricKey;
+    payload.coatFabricLabel = cc.fabricLabel;
   }
   // Suit (Takım Elbise) carries BOTH jacket + pant data-only fields.
   if (form.productType === 'SUIT' && form.pantConfig) {
@@ -484,6 +522,7 @@ export function OrdersPage() {
         newType === 'TROUSERS' || newType === 'SUIT'
           ? (prev.pantConfig ?? DEFAULT_PANT_CONFIG)
           : prev.pantConfig,
+      coatConfig: newType === 'PALTO' ? (prev.coatConfig ?? DEFAULT_COAT_CONFIG) : prev.coatConfig,
     }));
     setError(null);
   }
@@ -520,7 +559,8 @@ export function OrdersPage() {
       (order.productType === 'SHIRT' && !!order.shirtFabricKey) ||
       (order.productType === 'SMOKIN' && !!order.tuxedoStyle) ||
       (order.productType === 'VEST' && !!order.vestFabricKey) ||
-      (order.productType === 'TROUSERS' && !!order.pantFabricKey);
+      (order.productType === 'TROUSERS' && !!order.pantFabricKey) ||
+      (order.productType === 'PALTO' && !!order.coatFabricKey);
     setWizardStep(readOnly && hasConfig ? 2 : 1);
     setShowForm(true);
   }
@@ -564,7 +604,8 @@ export function OrdersPage() {
       form.productType === 'SHIRT' ||
       form.productType === 'SMOKIN' ||
       form.productType === 'VEST' ||
-      form.productType === 'TROUSERS';
+      form.productType === 'TROUSERS' ||
+      form.productType === 'PALTO';
 
     if (!isConfigurable) {
       // No configurator wired for this product type — fall back to the
@@ -597,6 +638,10 @@ export function OrdersPage() {
         form.productType === 'TROUSERS' || form.productType === 'SUIT'
           ? (form.pantConfig ?? DEFAULT_PANT_CONFIG)
           : form.pantConfig,
+      coatConfig:
+        form.productType === 'PALTO'
+          ? (form.coatConfig ?? DEFAULT_COAT_CONFIG)
+          : form.coatConfig,
     };
     setForm(seededForm);
 
@@ -646,11 +691,13 @@ export function OrdersPage() {
   const isTuxedo   = form.productType === 'SMOKIN';
   const isVest     = form.productType === 'VEST';
   const isTrousers = form.productType === 'TROUSERS';
+  const isCoat     = form.productType === 'PALTO';
   const jacketValue  = form.jacketConfig ?? defaultJacketConfig;
   const shirtValue   = form.shirtConfig  ?? defaultShirtConfig;
   const tuxedoValue  = form.tuxedoConfig ?? defaultTuxedoConfig;
   const vestValue    = form.vestConfig   ?? DEFAULT_VEST_CONFIG;
   const pantValue    = form.pantConfig   ?? DEFAULT_PANT_CONFIG;
+  const coatValue    = form.coatConfig   ?? DEFAULT_COAT_CONFIG;
   const configuratorSummaryItems = getConfiguratorSummaryItems({
     ...form,
     jacketConfig: (isJacket || isSuit) ? jacketValue : form.jacketConfig,
@@ -658,12 +705,14 @@ export function OrdersPage() {
     tuxedoConfig: isTuxedo ? tuxedoValue : form.tuxedoConfig,
     vestConfig: isVest ? vestValue : form.vestConfig,
     pantConfig: (isTrousers || isSuit) ? pantValue : form.pantConfig,
+    coatConfig: isCoat ? coatValue : form.coatConfig,
   });
   const onJacketChange  = (config: JacketConfig)  => setForm((prev) => ({ ...prev, jacketConfig: config }));
   const onShirtChange   = (config: ShirtConfig)   => setForm((prev) => ({ ...prev, shirtConfig: config }));
   const onTuxedoChange  = (config: TuxedoConfig)  => setForm((prev) => ({ ...prev, tuxedoConfig: config }));
   const onVestChange    = (config: VestConfig)    => setForm((prev) => ({ ...prev, vestConfig: config }));
   const onPantChange    = (config: PantConfig)    => setForm((prev) => ({ ...prev, pantConfig: config }));
+  const onCoatChange    = (config: CoatConfig)    => setForm((prev) => ({ ...prev, coatConfig: config }));
 
   return (
     <section className="orders-page">
@@ -746,7 +795,7 @@ export function OrdersPage() {
                   {editingOrder?.orderNumber ?? 'Sipariş Bilgileri'}
                 </h2>
               </div>
-              {(isJacket || isSuit || isShirt || isTuxedo || isVest || isTrousers) && (
+              {(isJacket || isSuit || isShirt || isTuxedo || isVest || isTrousers || isCoat) && (
                 <span
                   style={{
                     fontSize: 13,
@@ -919,7 +968,7 @@ export function OrdersPage() {
                 >
                   {isSubmitting
                     ? 'Kaydediliyor...'
-                    : (isJacket || isSuit || isShirt || isTuxedo || isVest || isTrousers)
+                    : (isJacket || isSuit || isShirt || isTuxedo || isVest || isTrousers || isCoat)
                       ? 'Devam Et →'
                       : editingOrder
                         ? 'Güncelle'
@@ -932,7 +981,7 @@ export function OrdersPage() {
       )}
 
       {/* ── STEP 2: full-screen configurator overlay ── */}
-      {showForm && wizardStep === 2 && (isJacket || isSuit || isShirt || isTuxedo || isVest || isTrousers) && (
+      {showForm && wizardStep === 2 && (isJacket || isSuit || isShirt || isTuxedo || isVest || isTrousers || isCoat) && (
         <div className="configurator-overlay">
           {/* Left panel */}
           <div className="configurator-sidebar">
@@ -1033,6 +1082,14 @@ export function OrdersPage() {
                   readOnly={isReadOnly}
                 />
               )}
+              {isCoat && (
+                <CoatConfigurator
+                  mode="controls-all"
+                  value={coatValue}
+                  onChange={onCoatChange}
+                  readOnly={isReadOnly}
+                />
+              )}
             </div>
           </div>
 
@@ -1085,6 +1142,14 @@ export function OrdersPage() {
                 mode="viewer-only"
                 value={pantValue}
                 onChange={onPantChange}
+                viewerBackground={viewerBg}
+              />
+            )}
+            {isCoat && (
+              <CoatConfigurator
+                mode="viewer-only"
+                value={coatValue}
+                onChange={onCoatChange}
                 viewerBackground={viewerBg}
               />
             )}
@@ -1258,6 +1323,15 @@ export function OrdersPage() {
                             onClick={() => openEditForm(order, true)}
                           >
                             Pantolonu Gör
+                          </button>
+                        )}
+                        {order.productType === 'PALTO' && order.coatFabricKey && (
+                          <button
+                            className="ghost-button small-button"
+                            type="button"
+                            onClick={() => openEditForm(order, true)}
+                          >
+                            Paltonu Gör
                           </button>
                         )}
                         <button

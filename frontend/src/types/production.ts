@@ -1,4 +1,4 @@
-export type ProductType = 'SHIRT' | 'JACKET' | 'TROUSERS' | 'VEST' | 'SUIT' | 'SMOKIN';
+export type ProductType = 'SHIRT' | 'JACKET' | 'TROUSERS' | 'VEST' | 'SUIT' | 'SMOKIN' | 'PALTO';
 
 export type ProductionPriority = 'LOW' | 'NORMAL' | 'HIGH' | 'URGENT';
 
@@ -87,6 +87,7 @@ export function getProductTypeLabel(value: ProductType) {
     VEST: 'Yelek',
     SUIT: 'Takım Elbise',
     SMOKIN: 'Smokin',
+    PALTO: 'Palto',
   };
   return labels[value];
 }

@@ -394,5 +394,32 @@
     "swatchSrc": "https://erdalguda-assets.s3.eu-north-1.amazonaws.com/blazer/generated-swatches/custom_mavi_izgili_005.png",
     "color": null,
     "garmentType": "blazer"
+  },
+  {
+    "key": "custom-mavi-izgili-006",
+    "fabricId": "custom_mavi_izgili_006",
+    "label": "Mavi Çizgili",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "https://erdalguda-assets.s3.eu-north-1.amazonaws.com/blazer/generated-swatches/custom_mavi_izgili_006.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-siyah-velvet-002",
+    "fabricId": "custom_siyah_velvet_002",
+    "label": "Siyah Velvet",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "https://erdalguda-assets.s3.eu-north-1.amazonaws.com/blazer/generated-swatches/custom_siyah_velvet_002.png",
+    "color": null,
+    "garmentType": "blazer"
+  },
+  {
+    "key": "custom-k-rm-z",
+    "fabricId": "custom_k_rm_z",
+    "label": "Kırmızı",
+    "subtitle": "Custom uploaded fabric",
+    "swatchSrc": "https://erdalguda-assets.s3.eu-north-1.amazonaws.com/blazer/generated-swatches/custom_k_rm_z.png",
+    "color": null,
+    "garmentType": "blazer"
   }
 ]

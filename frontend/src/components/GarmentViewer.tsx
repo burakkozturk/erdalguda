@@ -57,9 +57,9 @@ type ConfigState = 'loading' | 'retrying' | 'ready' | 'error';
 // ---------------------------------------------------------------------------
 
 const CONFIG_ENDPOINTS: Record<string, string> = {
-  pant:  '/api/pants/config',
-  shirt: '/api/shirts/config',
-  vest:  '/api/vests/config',
+  pant:  '/assets/pant/pant_config.json',
+  shirt: '/assets/shirts/shirt_config.json',
+  vest:  '/assets/vest/vest_config.json',
 };
 
 const FABRIC_VERSION = 4;
@@ -89,7 +89,7 @@ function buildPantLayers(config: PantConfig, fabricKey: string, styleKeys: Recor
   ]
     .filter((l) => {
       const f = l.path.split('/').pop() ?? '';
-      return !f.includes('zapatos') && l.z !== 30;
+      return !f.includes('zapatos');
     })
     .sort((a, b) => a.z - b.z)
     .flatMap((l): ViewerLayer[] => {

@@ -1,7 +1,74 @@
-<svg width="420" height="360" viewBox="0 0 420 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="420" height="360" rx="28" fill="#FBF8F1"/>
-  <path d="M116 94L164 64L210 112L256 64L304 94L284 316H136L116 94Z" fill="#2A2926" stroke="#171717" stroke-width="5" stroke-linejoin="round"/>
-  <path d="M164 64L190 172L210 112L230 172L256 64" stroke="#D5B873" stroke-width="4" stroke-linejoin="round"/>
-  <path d="M210 112V316" stroke="#8C7B62" stroke-width="3"/>
-  <path d="M148 214H192M228 214H272" stroke="#D5B873" stroke-width="4" stroke-linecap="round"/>
+<svg width="420" height="540" viewBox="0 0 420 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Warm ivory background -->
+  <rect width="420" height="540" rx="28" fill="#F5F2EC"/>
+
+  <!-- ── Left sleeve (rendered behind body) ── -->
+  <path d="M78 70 L56 294 L118 294 L140 70 Z"
+        fill="#232120" stroke="#171514" stroke-width="3.5" stroke-linejoin="round"/>
+
+  <!-- ── Right sleeve (rendered behind body) ── -->
+  <path d="M342 70 L364 294 L302 294 L280 70 Z"
+        fill="#232120" stroke="#171514" stroke-width="3.5" stroke-linejoin="round"/>
+
+  <!-- ── Coat body ── -->
+  <!-- Collar notch: (162,48) → shoulder (140,70) → hem-left (96,488)
+       hem-right (324,488) → shoulder (280,70) → collar-right (258,48)
+       → V-neck bottom (210,102) → back to start                        -->
+  <path d="M162 48 L140 70 L96 488 L324 488 L280 70 L258 48 L210 102 Z"
+        fill="#2D2A26" stroke="#171514" stroke-width="4" stroke-linejoin="round"/>
+
+  <!-- ── Left lapel (front-panel folded back — slightly darker) ── -->
+  <path d="M162 48 L140 70 L158 146 L200 168 L210 102 Z"
+        fill="#1D1C19" stroke="#111110" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- ── Right lapel ── -->
+  <path d="M258 48 L280 70 L262 146 L220 168 L210 102 Z"
+        fill="#1D1C19" stroke="#111110" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- ── Collar stand / fall piece (sits above lapels at neck) ── -->
+  <path d="M162 48 L186 34 L210 28 L234 34 L258 48 L234 58 L210 54 L186 58 Z"
+        fill="#2D2A26" stroke="#171514" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- ── Gorge notch – left (where collar meets lapel) ── -->
+  <path d="M200 168 L194 161 L200 155"
+        stroke="#171514" stroke-width="1.5" fill="none"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- ── Gorge notch – right ── -->
+  <path d="M220 168 L226 161 L220 155"
+        stroke="#171514" stroke-width="1.5" fill="none"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- ── Center placket line ── -->
+  <line x1="210" y1="172" x2="210" y2="484" stroke="#5A4E3C" stroke-width="2.5"/>
+
+  <!-- ── Buttons (6 gold buttons evenly spaced) ── -->
+  <circle cx="210" cy="200" r="5.5" fill="#C8A94E" stroke="#A88B38" stroke-width="1"/>
+  <circle cx="210" cy="250" r="5.5" fill="#C8A94E" stroke="#A88B38" stroke-width="1"/>
+  <circle cx="210" cy="300" r="5.5" fill="#C8A94E" stroke="#A88B38" stroke-width="1"/>
+  <circle cx="210" cy="350" r="5.5" fill="#C8A94E" stroke="#A88B38" stroke-width="1"/>
+  <circle cx="210" cy="400" r="5.5" fill="#C8A94E" stroke="#A88B38" stroke-width="1"/>
+  <circle cx="210" cy="450" r="5.5" fill="#C8A94E" stroke="#A88B38" stroke-width="1"/>
+
+  <!-- ── Left pocket flap (hip level) ── -->
+  <rect x="124" y="318" width="70" height="16" rx="3"
+        fill="#272420" stroke="#5A4E3C" stroke-width="2"/>
+
+  <!-- ── Right pocket flap ── -->
+  <rect x="226" y="318" width="70" height="16" rx="3"
+        fill="#272420" stroke="#5A4E3C" stroke-width="2"/>
+
+  <!-- ── Left cuff band ── -->
+  <line x1="58"  y1="288" x2="116" y2="288"
+        stroke="#8C7B62" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- ── Right cuff band ── -->
+  <line x1="304" y1="288" x2="362" y2="288"
+        stroke="#8C7B62" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- ── Shoulder seam hints ── -->
+  <line x1="79"  y1="71" x2="140" y2="71"
+        stroke="#5A4E3C" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="280" y1="71" x2="341" y2="71"
+        stroke="#5A4E3C" stroke-width="1.5" stroke-linecap="round"/>
 </svg>

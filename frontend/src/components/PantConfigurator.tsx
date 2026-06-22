@@ -74,6 +74,7 @@ interface ViewerLayer {
   key: string;
   z: number;
   src: string;
+  fallbackSrc?: string;
 }
 
 // ---------------------------------------------------------------------------
@@ -96,11 +97,9 @@ function buildLayers(
 
   // UI filters (config kept intact so standalone pipeline still produces them):
   //  - zapatos: decorative shoe layer, hidden in configurator
-  //  - all z=30 layers: dark silhouette/positioning masks (base body mask + fastening masks)
   const filteredLayers = rawLayers.filter((layer) => {
     const filename = layer.path.split('/').pop() ?? '';
     if (filename.includes('zapatos')) return false;
-    if (layer.z === 30) return false;
     return true;
   });
 
@@ -109,17 +108,18 @@ function buildLayers(
   const result: ViewerLayer[] = [];
   for (const layer of filteredLayers) {
     const filename = layer.path.split('/').pop() ?? '';
+    const relativePath = layer.path.replace(/^pants\//, '');
+    const templateSrc = `/assets/pant/${relativePath}`;
     if (layer.fabric) {
       if (!fabricKey) continue;
       result.push({
         key: layer.path,
         z: layer.z,
         src: generatedLayerUrl('pant', fabricDir, filename, FABRIC_ASSET_VERSION),
+        fallbackSrc: templateSrc,
       });
     } else {
-      // Static: /assets/pant/{path-without-leading-"pants/"}
-      const relativePath = layer.path.replace(/^pants\//, '');
-      result.push({ key: layer.path, z: layer.z, src: `/assets/pant/${relativePath}` });
+      result.push({ key: layer.path, z: layer.z, src: templateSrc });
     }
   }
 
@@ -158,13 +158,13 @@ export default function PantConfigurator({
   const initialValueRef = useRef(value);
 
   useEffect(() => {
-    fetch('/api/pants/config')
+    fetch('/assets/pant/pant_config.json')
       .then((r) => {
         if (!r.ok) throw new Error('pant_config yüklenemedi');
         return r.json() as Promise<PantConfigJson>;
       })
       .then(setPantConfig)
-      .catch(console.error);
+      .catch(() => {});
   }, []);
 
   useEffect(() => {
@@ -180,7 +180,7 @@ export default function PantConfigurator({
           });
         }
       })
-      .catch(console.error);
+      .catch(() => {});
   }, []);
 
   const layers = useMemo<ViewerLayer[]>(() => {
@@ -327,7 +327,15 @@ export default function PantConfigurator({
           className="jc-layer"
           style={{ zIndex: layer.z }}
           draggable={false}
-          onError={() => console.error('Pantolon katmanı yüklenemedi:', layer.src)}
+          onError={(e) => {
+            const img = e.currentTarget as HTMLImageElement;
+            if (layer.fallbackSrc && !img.dataset.fellBack) {
+              img.dataset.fellBack = '1';
+              img.src = layer.fallbackSrc;
+            } else {
+              img.style.display = 'none';
+            }
+          }}
         />
       ))}
       <PremiumViewerLoader active={viewerLoading} />

@@ -4,6 +4,7 @@ import suitImage from '../assets/imgs/erdalguda-10.jpg';
 import trouserImage from '../assets/imgs/erdalguda-7.jpg';
 import vestImage from '../assets/imgs/erdalguda-8.jpg';
 import tuxedoImage from '../assets/imgs/erdalguda-11.jpg';
+import coatImage from '../assets/imgs/erdalguda-9.jpg';
 
 export type Product = {
   id: string;
@@ -68,5 +69,14 @@ export const products: Product[] = [
       'Smokin, gece etiketinin gerektirdiği keskin siluet ile rahat hareket alanını dengeleyen özel bir terzilik çalışmasıdır. İpek satin yaka, kemerli pantolon ve geleneksel düğme yerleşimi, davet temasına göre kişiselleştirilir.',
     image: tuxedoImage,
     features: ['Sivri veya şal yaka', 'İpek satin yaka kaplaması', 'Kemerli pantolon ve kuşak detayı'],
+  },
+  {
+    id: 'palto',
+    title: 'Palto',
+    shortDescription: 'Kaşmir veya yün kumaşla, devrik ya da dik yaka seçenekli özel dikim palto.',
+    longDescription:
+      'Palto, soğuk mevsimlerin zarif dış giysisidir. Yaka stili, boy tercihi, kumaş dokusu ve kapama detayları bir bütün olarak değerlendirilir; sonuç, vücudu doğru saran ve karakteri tamamlayan bir silüet sunar.',
+    image: coatImage,
+    features: ['Devrik veya dik yaka', 'Klasik veya uzun boy', 'Kaşmir / Yün kumaş seçimi'],
   },
 ];

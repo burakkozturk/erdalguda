@@ -11,12 +11,15 @@ import { DEFAULT_PANT_CONFIG } from '../../types/pant';
 import type { VestConfig } from '../../types/vest';
 import { DEFAULT_VEST_CONFIG } from '../../types/vest';
 import type { TuxedoConfig } from '../../types/tuxedo';
+import type { CoatConfig } from '../../types/coat';
+import { DEFAULT_COAT_CONFIG, COAT_STYLE_PARAMS } from '../../types/coat';
 import JacketConfigurator from '../../components/JacketConfigurator';
 import ShirtConfigurator from '../../components/ShirtConfigurator';
 import PantConfigurator from '../../components/PantConfigurator';
 import VestConfigurator from '../../components/VestConfigurator';
 import SuitConfigurator from '../../components/SuitConfigurator';
 import TuxedoConfigurator from '../../components/TuxedoConfigurator';
+import CoatConfigurator from '../../components/CoatConfigurator';
 
 const PRODUCT_OPTIONS: Array<{ type: ProductType; icon: string }> = [
   { type: 'JACKET', icon: '🧥' },
@@ -25,6 +28,7 @@ const PRODUCT_OPTIONS: Array<{ type: ProductType; icon: string }> = [
   { type: 'TROUSERS', icon: '👖' },
   { type: 'VEST', icon: '🦺' },
   { type: 'SMOKIN', icon: '🤵' },
+  { type: 'PALTO', icon: '🥼' },
 ];
 
 const DEFAULT_JACKET_CONFIG: JacketConfig = {
@@ -67,6 +71,7 @@ export function VipOrderFlow() {
   const [pantConfig, setPantConfig] = useState<PantConfig>(DEFAULT_PANT_CONFIG);
   const [vestConfig, setVestConfig] = useState<VestConfig>(DEFAULT_VEST_CONFIG);
   const [tuxedoConfig, setTuxedoConfig] = useState<TuxedoConfig>(DEFAULT_TUXEDO_CONFIG);
+  const [coatConfig, setCoatConfig] = useState<CoatConfig>(DEFAULT_COAT_CONFIG);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [orderSuccess, setOrderSuccess] = useState(false);
@@ -129,6 +134,17 @@ export function VipOrderFlow() {
       base.tuxedoPocketStyle = tuxedoConfig.pocketStyle;
       base.tuxedoFabricKey = tuxedoConfig.fabricKey || undefined;
       base.tuxedoFabricLabel = tuxedoConfig.fabricLabel || undefined;
+    } else if (productType === 'PALTO') {
+      const params = COAT_STYLE_PARAMS[coatConfig.style];
+      base.coatStyle = params.internalStyle;
+      base.coatCollarStyle = params.collarStyle;
+      base.coatLapelStyle = coatConfig.lapelStyle;
+      base.coatLapelLength = params.lapelLength;
+      base.coatLapelWidth = params.lapelWidth;
+      base.coatFastening = params.fastening;
+      base.coatPocketStyle = params.pocketStyle;
+      base.coatFabricKey = coatConfig.fabricKey || undefined;
+      base.coatFabricLabel = coatConfig.fabricLabel || undefined;
     }
 
     return base;
@@ -153,6 +169,7 @@ export function VipOrderFlow() {
       case 'TROUSERS': return pantConfig.fabricLabel;
       case 'VEST': return vestConfig.fabricLabel;
       case 'SMOKIN': return tuxedoConfig.fabricLabel;
+      case 'PALTO': return coatConfig.fabricLabel;
       default: return jacketConfig.fabricLabel;
     }
   }
@@ -386,6 +403,14 @@ export function VipOrderFlow() {
               showUpload={false}
             />
           )}
+          {productType === 'PALTO' && (
+            <CoatConfigurator
+              value={coatConfig}
+              onChange={setCoatConfig}
+              mode="controls-all"
+              showUpload={false}
+            />
+          )}
 
           {/* Notes + Submit */}
           <div
@@ -571,6 +596,14 @@ export function VipOrderFlow() {
               <TuxedoConfigurator
                 value={tuxedoConfig}
                 onChange={setTuxedoConfig}
+                mode="viewer-only"
+                viewerBackground={VIEWER_BG}
+              />
+            )}
+            {productType === 'PALTO' && (
+              <CoatConfigurator
+                value={coatConfig}
+                onChange={setCoatConfig}
                 mode="viewer-only"
                 viewerBackground={VIEWER_BG}
               />
